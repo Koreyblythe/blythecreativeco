@@ -1,0 +1,35 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f6f3; /* Light neutral color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo Styling */
+.logo {
+    width: 200px;
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6600;
+}
