@@ -14,7 +14,7 @@
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <ul>
-            <li><a href="#">Home</a></li> <!-- Clicking "Home" now scrolls to the top -->
+            <li><a href="#">Home</a></li> <!-- Scrolls to top -->
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -68,7 +68,6 @@
             document.querySelector('.overlay').classList.remove('active');
         });
 
-        // Scroll to Top when "Home" is Clicked
         document.querySelector("a[href='#']").addEventListener("click", function(e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
