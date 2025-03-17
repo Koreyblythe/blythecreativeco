@@ -8,8 +8,10 @@
 </head>
 <body>
 
+    <!-- Sidebar Toggle Button -->
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+    <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,21 +25,43 @@
 
     <div class="section-container">
         <h1>Our Portfolio</h1>
+        <p>We work with brands to enhance their marketing, branding, and digital presence. Here are some of the businesses we've worked with:</p>
 
         <div class="portfolio-item">
             <h2>Topp Shape Fitness</h2>
-            <p>Strategic social media & branding campaigns designed to grow engagement and customer retention.</p>
+            <p><strong>Social Media Management:</strong> Created and managed social media strategies to increase engagement and brand recognition.</p>
+            <p><strong>Advertising & Promotions:</strong> Designed ad campaigns to attract new clients and boost sales.</p>
+            <p><strong>Endorsement Strategies:</strong> Developed sponsorship and partnership opportunities for the brand.</p>
+            <p><strong>Consulting Services:</strong> Provided insights on business growth, brand positioning, and customer outreach.</p>
+            <p><strong>Follow Topp Shape Fitness:</strong> 
+                <a href="https://www.facebook.com/topp95" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/toppshapefit" target="_blank">@toppshapefit</a>
+            </p>
         </div>
 
         <div class="portfolio-item">
             <h2>Nailed by Tay</h2>
-            <p>Custom branding overhaul, pricing revamp, and client communication enhancements.</p>
+            <p><strong>Logo Design & Branding:</strong> Created a new logo and visual identity for a modern, sleek brand presentation.</p>
+            <p><strong>Service Pricing & Policies:</strong> Redesigned pricing lists and customer policies for a more professional look.</p>
+            <p><strong>Instagram Revamp:</strong> Transformed Instagram profile with a clean, aesthetic layout that aligns with the brand.</p>
+            <p><strong>Business Consulting:</strong> Assisted in refining client interactions and structuring services.</p>
+            <p><strong>Follow Nailed by Tay:</strong> 
+                <a href="https://www.instagram.com/nailed.by.tay" target="_blank">@nailed.by.tay</a>
+            </p>
         </div>
     </div>
 
+    <!-- Footer Logo -->
     <footer>
         <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
