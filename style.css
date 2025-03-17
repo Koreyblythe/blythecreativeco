@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #E4E2DD; /* Exact background match */
+    background-color: #E4E2DD; /* Ensures correct background */
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,16 +10,17 @@ body {
 
 /* Logo Styling */
 .main-logo {
-    width: 250px;
-    margin: 20px auto;
+    width: 220px;
+    margin: 30px auto;
     display: block;
 }
 
-/* Container for Main Content */
+/* Main Content Styling */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
+    line-height: 1.6;
 }
 
 /* Contact Box */
@@ -38,5 +39,5 @@ footer {
 }
 
 .footer-logo {
-    width: 150px;
+    width: 130px;
 }
