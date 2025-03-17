@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Blythe Creative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Portfolio</h1>
+        <p>Explore some of our recent branding and marketing projects.</p>
+
+        <!-- Topp Shape Fitness -->
+        <div class="portfolio-item">
+            <h2>Topp Shape Fitness</h2>
+            <p><strong>Services Provided:</strong></p>
+            <ul>
+                <li>📢 **Advertising Campaigns** – Designed and launched strategic ad campaigns to increase brand awareness and engagement.</li>
+                <li>📱 **Social Media Management** – Curated content, scheduled posts, and implemented engagement strategies to grow audience reach.</li>
+                <li>💡 **Business Consulting** – Provided expert insights on brand positioning and marketing approaches.</li>
+                <li>🤝 **Endorsement Strategies** – Developed unique promotional partnerships and influencer collaborations to strengthen brand credibility.</li>
+            </ul>
+        </div>
+
+        <!-- Nailed by Tay -->
+        <div class="portfolio-item">
+            <h2>Nailed by Tay</h2>
+            <p><strong>Services Provided:</strong></p>
+            <ul>
+                <li>🎨 **Logo Design & Branding** – Created a modern, elegant logo tailored to the brand’s identity.</li>
+                <li>💰 **Pricing List Redesign** – Revamped service pricing for clarity and a more professional presentation.</li>
+                <li>📜 **Policy & Guidelines Development** – Structured policies to enhance customer experience and ensure smooth business operations.</li>
+                <li>📸 **Instagram Aesthetic & Strategy** – Transformed the brand’s online presence through custom layouts and a cohesive visual theme.</li>
+                <li>📝 **Consulting & Brand Growth** – Provided tailored advice on business expansion and digital marketing improvements.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
