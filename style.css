@@ -8,11 +8,16 @@ body {
     padding: 0;
 }
 
-/* Top Logo - Bigger */
+/* Header Text - Keep Above Logo */
+.header-container {
+    margin-top: 30px;
+}
+
+/* Top Logo - Big */
 .main-logo {
-    width: 450px; /* Increased size significantly */
+    width: 450px; /* Increased size */
     display: block;
-    margin: 30px auto -10px auto; /* Adjusted spacing */
+    margin: 10px auto -10px auto; /* Adjusted spacing */
 }
 
 /* Main Content Styling */
