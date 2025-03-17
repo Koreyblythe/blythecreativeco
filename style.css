@@ -6,7 +6,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -20,9 +20,9 @@ body {
     width: 250px;
     height: 100%;
     background-color: #333;
-    padding-top: 40px; /* Push menu items down so "Home" is visible */
+    padding-top: 60px; /* Push menu items down more to make Home visible */
     transition: left 0.3s ease-in-out;
-    z-index: 1001; /* Ensures it overlays everything */
+    z-index: 1001;
 }
 
 /* Sidebar Active (When Open) */
@@ -86,14 +86,14 @@ body {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    z-index: 1002; /* Ensures the button is always on top */
+    z-index: 1002;
 }
 
 /* Header */
 header {
     margin-top: 30px;
     position: relative;
-    z-index: 998; /* Ensures it does not get hidden */
+    z-index: 998;
 }
 
 /* Header Text */
@@ -129,7 +129,7 @@ header {
 }
 
 .contact-box a:hover {
-    color: #8B5E3C; /* Brown highlight when hovered */
+    color: #8B5E3C;
 }
 
 /* Portfolio Items */
@@ -142,33 +142,13 @@ header {
     text-align: center;
 }
 
-.portfolio-item h2 {
-    color: #8B5E3C; /* Brown Highlight */
-    font-size: 22px;
-}
-
-.portfolio-item ul {
-    list-style-position: inside;
-    text-align: left;
-    padding-left: 20px;
-}
-
-/* Footer Logo (Appears on Every Page & Stays at Bottom) */
-.footer-logo {
-    width: 120px; /* Larger Size */
+/* Footer Logo (Bigger & Fixed at Bottom) */
+footer {
     margin-top: auto;
-    padding: 20px;
+    padding: 30px;
+    text-align: center;
 }
 
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-    .menu-toggle {
-        left: 5px;
-    }
-    .contact-box, .container {
-        width: 80%;
-    }
+.footer-logo {
+    width: 150px; /* Larger Size */
 }
