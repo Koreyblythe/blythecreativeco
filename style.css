@@ -8,16 +8,16 @@ body {
     padding: 0;
 }
 
-/* Header Text - Keep Above Logo */
-.header-container {
-    margin-top: 30px;
+/* Top Logo - Bigger */
+.main-logo {
+    width: 500px; /* Increased size */
+    display: block;
+    margin: 20px auto 5px auto; /* Keeps spacing clean */
 }
 
-/* Top Logo - Big */
-.main-logo {
-    width: 450px; /* Increased size */
-    display: block;
-    margin: 10px auto -10px auto; /* Adjusted spacing */
+/* Header Text - Close to the Top & Below Logo */
+.header-container {
+    margin-top: 5px; /* Keeps header close to logo */
 }
 
 /* Main Content Styling */
