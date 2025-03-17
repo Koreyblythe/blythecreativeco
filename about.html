@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blythe Creative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>About Blythe Creative</h1>
+        <p>
+            Blythe Creative is a full-service branding and marketing agency based in Murphysboro, Illinois.
+            We specialize in **logo design, brand identity, social media marketing, and website creation**. 
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+            Our goal is to help businesses build **strong brand recognition** through effective 
+            **visual storytelling and strategic marketing**.
+        </p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
