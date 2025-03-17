@@ -21,6 +21,8 @@
         </ul>
     </nav>
 
+    <div class="overlay" onclick="toggleMenu()"></div>
+
     <div class="container">
         <h1>Portfolio</h1>
         <p>We create **powerful branding and marketing strategies** for businesses looking to stand out.</p>
@@ -28,27 +30,31 @@
         <div class="portfolio-item">
             <h2>Topp Shape Fitness</h2>
             <ul>
-                <li>📢 **Strategic Ad Campaigns**</li>
-                <li>📱 **Social Media Management & Growth**</li>
-                <li>💡 **Branding & Business Consulting**</li>
-                <li>🤝 **Influencer & Endorsement Strategies**</li>
+                <li><strong>Strategic Ad Campaigns</strong></li>
+                <li><strong>Social Media Management</strong></li>
+                <li><strong>Branding & Business Consulting</strong></li>
             </ul>
         </div>
 
         <div class="portfolio-item">
             <h2>Nailed by Tay</h2>
             <ul>
-                <li>🎨 **Logo Design & Branding Revamp**</li>
-                <li>📜 **Updated Pricing & Policies**</li>
-                <li>📸 **Instagram Aesthetic & Strategy**</li>
-                <li>📝 **Business Consultation for Digital Presence**</li>
+                <li><strong>Logo Design & Branding Revamp</strong></li>
+                <li><strong>Updated Pricing & Policies</strong></li>
+                <li><strong>Business Consultation</strong></li>
             </ul>
         </div>
     </div>
 
+    <!-- Footer Logo -->
+    <footer>
+        <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
+    </footer>
+
     <script>
         function toggleMenu() {
             document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
         }
     </script>
 
