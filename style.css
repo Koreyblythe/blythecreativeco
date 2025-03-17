@@ -14,7 +14,7 @@ body {
 
 /* Adjustments for homepage elements */
 .homepage-container {
-    margin-top: -40px; /* Raises all elements slightly */
+    margin-top: -20px; /* Slightly raised */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     width: 250px;
     height: 100%;
     background-color: #333;
-    padding-top: 80px; /* Push menu items down more */
+    padding-top: 80px;
     transition: left 0.3s ease-in-out;
     z-index: 1001;
 }
@@ -97,16 +97,17 @@ body {
     z-index: 1002;
 }
 
-/* Header */
-header {
-    margin-top: 20px;
-    position: relative;
-    z-index: 998;
+/* Top Logo */
+.top-logo {
+    width: 200px; /* Larger Size */
+    margin-top: 30px; /* Raised Higher */
 }
 
-/* Header Text */
-.header-container {
-    margin-top: -20px;
+/* Header */
+.header-text {
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 /* Content Box Styling */
