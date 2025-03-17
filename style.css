@@ -1,31 +1,42 @@
-/* General Page Styling */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f6f4ef; /* Background color matches your images */
+    background-color: #f5f3ee; /* Updated to match image background */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 /* Logo Styling */
-.logo {
+.main-logo {
     width: 250px;
-    margin-top: 20px;
+    margin: 20px auto;
+    display: block;
 }
 
-/* Contact Section */
-.contact {
-    background-color: #ffffff;
-    padding: 20px;
+/* Container for Main Content */
+.container {
+    max-width: 800px;
     margin: 20px auto;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Contact Box */
+.contact-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
 }
 
 /* Footer Logo */
-.footer-logo {
-    width: 200px;
+footer {
     margin-top: 40px;
+}
+
+.footer-logo {
+    width: 150px;
 }
