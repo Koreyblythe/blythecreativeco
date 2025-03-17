@@ -1,60 +1,44 @@
-/* Set background color */
+/* General Styles */
 body {
-    background-color: #E4E2DD;
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #E4E2DD; /* Ensures correct background */
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Center content */
-.container {
-    max-width: 600px;
-    margin: 80px auto;
-    padding: 20px;
-}
-
-/* Logo styling */
+/* Logo Styling */
 .main-logo {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 220px;
+    margin: 30px auto;
+    display: block;
 }
 
-/* Tagline styling */
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* Main Content Styling */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #333;
-}
-
-/* Contact box styling */
+/* Contact Box */
 .contact-box {
     background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
 }
 
-.contact-box h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+/* Footer Logo */
+footer {
+    margin-top: 40px;
 }
 
-.contact-box a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Footer logo styling */
 .footer-logo {
-    width: 80px;
-    margin-top: 20px;
+    width: 130px;
 }
