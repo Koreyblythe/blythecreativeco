@@ -100,14 +100,14 @@ body {
 .top-logo {
     width: 420px;
     display: block;
-    margin: 5px auto -30px;
+    margin: -50px auto -20px; /* Moves it up higher */
 }
 
 /* Header */
 .header-text {
     font-size: 36px;
     font-weight: bold;
-    margin-top: -70px; /* Moves it up even more */
+    margin-top: -100px; /* Moves it even higher */
 }
 
 /* Introduction Sentence */
