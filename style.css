@@ -8,11 +8,11 @@ body {
     padding: 0;
 }
 
-/* Top Logo - Bigger & Allows Overlap */
+/* Top Logo - Bigger */
 .main-logo {
-    width: 350px; /* Increased size */
+    width: 450px; /* Increased size significantly */
     display: block;
-    margin: -20px auto 20px auto; /* Adjusted spacing to allow overlap */
+    margin: 30px auto -10px auto; /* Adjusted spacing */
 }
 
 /* Main Content Styling */
