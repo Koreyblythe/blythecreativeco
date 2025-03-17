@@ -8,24 +8,22 @@ body {
     padding: 0;
 }
 
-/* Sidebar Navigation (Hidden by Default) */
+/* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: -250px; /* Start off-screen */
+    left: -250px;
     top: 0;
     width: 250px;
     height: 100%;
     background-color: #333;
     padding-top: 20px;
-    transition: left 0.3s ease-in-out; /* Smooth animation */
+    transition: left 0.3s ease-in-out;
 }
 
-/* Sidebar Active (Shows Menu) */
 .sidebar.active {
     left: 0;
 }
 
-/* Sidebar Menu List */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -63,13 +61,58 @@ body {
     z-index: 1000;
 }
 
+/* Header */
+header {
+    margin-top: 30px; /* Moves the logo slightly up */
+}
+
+/* Header Text Placement */
+.header-container {
+    margin-top: -30px; /* Moves the header text up */
+}
+
+/* Text Alignment Fix */
+.container {
+    max-width: 800px; /* Keeps text from stretching too wide */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 30px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item ul {
+    list-style-position: inside; /* Moves bullet points inside */
+    padding-left: 0; /* Fixes misalignment */
+}
+
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 200px;
     }
-
     .menu-toggle {
         left: 5px;
+    }
+    .contact-box, .container {
+        width: 80%;
     }
 }
