@@ -1,44 +1,82 @@
-\<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blythe Creative</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #E4E2DD; /* Matches brand background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-  <!-- Top Logo (New Transparent Logo) -->
-  <header>
-    <img src="logo-transparent.png" alt="Blythe Creative Logo" class="main-logo">
-  </header>
+/* Top Logo - Bigger & Responsive */
+.main-logo {
+    width: 50%; /* Adjusts size based on screen width */
+    max-width: 500px; /* Limits maximum size */
+    display: block;
+    margin: 20px auto 5px auto;
+}
 
-  <!-- Header Text (Directly Underneath the Top Logo) -->
-  <div class="header-container">
-    <h1>Where Strategy Meets Creativity</h1>
-  </div>
+/* Header Text - Below Logo */
+.header-container {
+    margin-top: 5px;
+}
 
-  <!-- Main Content -->
-  <div class="container">
-    <p>
-      At Blythe Creative, we blend strategic thinking with innovative design to craft
-      compelling brand identities. From logo creation to marketing solutions,
-      we help businesses establish a powerful and lasting presence.
-    </p>
-  </div>
+/* Main Content Styling */
+.container {
+    max-width: 90%; /* Makes text fit better on mobile */
+    margin: 30px auto;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.6;
+}
 
-  <!-- Contact Info -->
-  <div class="contact-box">
-    <h2>Contact Us</h2>
-    <p><strong>Social Media:</strong> <a href="https://www.instagram.com/blythecreative.co" target="_blank">@blythecreative.co</a></p>
-    <p><strong>Phone:</strong> (618) 319-0067</p>
-    <p><strong>Location:</strong> Murphysboro, Illinois</p>
-  </div>
+/* Contact Box - Responsive */
+.contact-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    margin: 20px auto;
+}
 
-  <!-- Footer Logo -->
-  <footer>
-    <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
-  </footer>
+/* Footer Logo - Responsive */
+footer {
+    margin-top: 30px;
+}
 
-</body>
-</html>
+.footer-logo {
+    width: 40%;
+    max-width: 240px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Instagram Link Hover Effect */
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+/* MOBILE FIXES */
+@media screen and (max-width: 768px) {
+    .main-logo {
+        width: 70%; /* Slightly smaller on mobile */
+    }
+    .container {
+        padding: 10px;
+    }
+    .contact-box {
+        width: 80%;
+    }
+    .footer-logo {
+        width: 50%;
+    }
+}
