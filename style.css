@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 }
 
-/* Adjustments for homepage elements */
+/* Homepage Adjustments */
 .homepage-container {
     margin-top: -20px; /* Slightly raised */
     display: flex;
@@ -33,17 +33,16 @@ body {
     z-index: 1001;
 }
 
-/* Sidebar Active (When Open) */
 .sidebar.active {
     left: 0;
 }
 
-/* Hide Sidebar Button When Sidebar is Open */
+/* Sidebar Button Fix */
 .sidebar.active ~ .menu-toggle {
     display: none;
 }
 
-/* Close Sidebar When Clicking Outside */
+/* Sidebar Close on Click */
 .overlay {
     display: none;
     position: fixed;
@@ -99,15 +98,16 @@ body {
 
 /* Top Logo */
 .top-logo {
-    width: 200px; /* Larger Size */
-    margin-top: 30px; /* Raised Higher */
+    width: 200px; /* Increase size */
+    display: block;
+    margin: 30px auto -10px; /* Center & raise it slightly */
 }
 
 /* Header */
 .header-text {
-    margin-top: 10px;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
+    margin-top: 0px; /* Raised to prevent cutoff */
 }
 
 /* Content Box Styling */
@@ -119,6 +119,28 @@ body {
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram Link Highlight */
+.contact-box a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-box a:hover {
+    color: #8B5E3C;
 }
 
 /* Footer Logo (Bigger & Fixed at Bottom) */
