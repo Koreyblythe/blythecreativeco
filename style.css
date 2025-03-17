@@ -27,6 +27,11 @@ body {
     left: 0;
 }
 
+/* Hide Sidebar Button When Sidebar is Open */
+.sidebar.active ~ .menu-toggle {
+    display: none;
+}
+
 /* Close Sidebar When Clicking Outside */
 .overlay {
     display: none;
@@ -64,7 +69,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #8B5E3C; /* Brown Highlight */
+    background-color: #555;
 }
 
 /* Sidebar Toggle Button */
@@ -102,7 +107,7 @@ header {
     line-height: 1.6;
 }
 
-/* Contact Box */
+/* Contact Box (White Background, No Brown Shadow) */
 .contact-box {
     background-color: white;
     color: black;
@@ -110,7 +115,7 @@ header {
     border-radius: 10px;
     width: 50%;
     margin: 30px auto;
-    box-shadow: 0px 4px 8px rgba(139, 94, 60, 0.3);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Instagram Link Highlight */
@@ -143,6 +148,12 @@ header {
     list-style-position: inside;
     text-align: left;
     padding-left: 20px;
+}
+
+/* Footer Logo (Appears on Every Page) */
+.footer-logo {
+    width: 80px;
+    margin-top: 20px;
 }
 
 /* Mobile Adjustments */
