@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #E4E2DD; /* Ensures correct background */
+    background-color: #E4E2DD; /* Background matches brand theme */
     color: #333;
     margin: 0;
     padding: 0;
@@ -41,4 +41,16 @@ footer {
 
 .footer-logo {
     width: 130px;
+}
+
+/* Instagram Link Hover Effect */
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6600; /* Highlight color on hover */
 }
