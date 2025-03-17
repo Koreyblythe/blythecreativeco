@@ -14,7 +14,7 @@ body {
 
 /* Homepage Adjustments */
 .homepage-container {
-    margin-top: -10px;
+    margin-top: -30px; /* Moves everything up */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,14 +100,14 @@ body {
 .top-logo {
     width: 250px;
     display: block;
-    margin: 30px auto 10px;
+    margin: 20px auto 0px; /* Moves it up slightly */
 }
 
 /* Header */
 .header-text {
-    font-size: 30px;
+    font-size: 60px; /* Twice as big */
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px; /* Moves it closer to the logo */
 }
 
 /* Content Box Styling */
