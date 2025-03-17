@@ -40,7 +40,9 @@ footer {
 }
 
 .footer-logo {
-    width: 180px; /* Increased size */
+    width: 240px; /* Increased size */
+    display: block;
+    margin: 20px auto;
 }
 
 /* Instagram Link Hover Effect */
