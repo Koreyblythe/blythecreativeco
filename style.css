@@ -10,8 +10,8 @@ body {
 
 /* Top Logo - Bigger & Responsive */
 .main-logo {
-    width: 50%; /* Adjusts size based on screen width */
-    max-width: 500px; /* Limits maximum size */
+    width: 50%;
+    max-width: 500px;
     display: block;
     margin: 20px auto 5px auto;
 }
@@ -23,11 +23,11 @@ body {
 
 /* Main Content Styling */
 .container {
-    max-width: 90%; /* Makes text fit better on mobile */
+    max-width: 600px; /* Makes text stack better and not stretch across the page */
     margin: 30px auto;
     text-align: center;
     padding: 15px;
-    line-height: 1.6;
+    line-height: 1.8; /* Slightly more spacing for readability */
 }
 
 /* Contact Box - Responsive */
@@ -53,7 +53,7 @@ footer {
     margin: 15px auto;
 }
 
-/* Instagram Link Hover Effect */
+/* Instagram Link Hover Effect - Changed to Brown */
 a {
     color: #000;
     text-decoration: none;
@@ -62,16 +62,17 @@ a {
 }
 
 a:hover {
-    color: #ff6600;
+    color: #8B5E3C; /* Brown hover effect */
 }
 
 /* MOBILE FIXES */
 @media screen and (max-width: 768px) {
     .main-logo {
-        width: 70%; /* Slightly smaller on mobile */
+        width: 70%;
     }
     .container {
         padding: 10px;
+        max-width: 90%; /* Prevents text from stretching too wide */
     }
     .contact-box {
         width: 80%;
