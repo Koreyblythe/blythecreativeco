@@ -8,12 +8,23 @@
 </head>
 <body>
 
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Top Logo -->
     <header>
         <img src="logo-transparent.png" alt="Blythe Creative Logo" class="main-logo">
     </header>
 
-    <!-- Header Text (Below Logo) -->
+    <!-- Header Text -->
     <div class="header-container">
         <h1>Where Strategy Meets Creativity</h1>
     </div>
@@ -21,14 +32,14 @@
     <!-- Main Content -->
     <div class="container">
         <p>
-            At Blythe Creative, we blend strategic thinking with innovative design to craft  
-            compelling brand identities. From logo creation to marketing solutions,  
-            we help businesses establish a powerful and lasting presence.
+            At Blythe Creative, we specialize in **brand identity, logo creation, and marketing strategies** 
+            that bring brands to life. Whether you're launching a new business or refreshing your existing one, 
+            we create **custom branding solutions** that leave a lasting impact.
         </p>
     </div>
 
     <!-- Contact Info -->
-    <div class="contact-box">
+    <div id="contact" class="contact-box">
         <h2>Contact Us</h2>
         <p><strong>Social Media:</strong> <a href="https://www.instagram.com/blythecreative.co" target="_blank">@blythecreative.co</a></p>
         <p><strong>Phone:</strong> (618) 319-0067</p>
@@ -39,6 +50,13 @@
     <footer>
         <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
     </footer>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
