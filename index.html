@@ -17,9 +17,11 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li> <!-- Now scrolls to contact section -->
         </ul>
     </nav>
+
+    <div class="overlay" onclick="toggleMenu()"></div>
 
     <!-- Top Logo -->
     <header>
@@ -34,9 +36,9 @@
     <!-- Main Content -->
     <div class="container">
         <p>
-            At Blythe Creative, we specialize in **brand identity, logo creation, and marketing strategies** 
+            At Blythe Creative, we specialize in <strong>brand identity, logo creation, and marketing strategies</strong> 
             that bring brands to life. Whether you're launching a new business or refreshing your existing one, 
-            we create **custom branding solutions** that leave a lasting impact.
+            we create <em>custom branding solutions</em> that leave a lasting impact.
         </p>
     </div>
 
@@ -53,11 +55,18 @@
         <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
     </footer>
 
-    <!-- JavaScript for Sidebar Toggle -->
+    <!-- JavaScript for Sidebar Toggle & Auto-Close -->
     <script>
         function toggleMenu() {
-            document.querySelector('.sidebar').classList.toggle('active');
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
         }
+
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        });
     </script>
 
 </body>
