@@ -14,7 +14,7 @@ body {
 
 /* Homepage Adjustments */
 .homepage-container {
-    margin-top: -50px; /* Moves everything up */
+    margin-top: -60px; /* Moves everything up */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,16 +98,16 @@ body {
 
 /* Top Logo */
 .top-logo {
-    width: 500px; /* Doubled size */
+    width: 420px; /* Slightly reduced */
     display: block;
-    margin: 10px auto -10px; /* Moves it up slightly */
+    margin: 5px auto -30px; /* Moves it up */
 }
 
 /* Header */
 .header-text {
-    font-size: 30px; /* Restored to original size */
+    font-size: 36px; /* Slightly increased */
     font-weight: bold;
-    margin-top: -30px; /* Moves it up closer to the logo */
+    margin-top: -50px; /* Moves it up so it doesn’t overlap text below */
 }
 
 /* Content Box Styling */
