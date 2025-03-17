@@ -14,10 +14,10 @@
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li> <!-- Clicking "Home" now scrolls to the top -->
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li> <!-- Now scrolls to contact section -->
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -66,6 +66,12 @@
         document.querySelector('.overlay').addEventListener('click', function() {
             document.querySelector('.sidebar').classList.remove('active');
             document.querySelector('.overlay').classList.remove('active');
+        });
+
+        // Scroll to Top when "Home" is Clicked
+        document.querySelector("a[href='#']").addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     </script>
 
