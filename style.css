@@ -12,12 +12,35 @@ body {
     min-height: 100vh;
 }
 
-/* Page Title */
+/* Header Section */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-logo {
+    width: 300px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Adjust spacing below logo */
+}
+
+/* Tagline - "Making Brands Unforgettable" */
 .header-text {
     font-family: "Playfair Display", serif;
     font-size: 48px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 0; /* Remove default margin */
+    padding-top: 5px; /* Fine-tune spacing */
 }
 
 /* Stacking Text Layout */
