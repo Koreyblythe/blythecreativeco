@@ -130,7 +130,35 @@ body {
     text-align: center;
 }
 
-/* Footer Logo */
+/* Portfolio Page */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Portfolio Boxes */
+.portfolio-box {
+    background: white;
+    padding: 25px;
+    width: 45%;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Portfolio List */
+.portfolio-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Footer */
 footer {
     margin-top: auto;
     padding: 40px;
@@ -139,4 +167,24 @@ footer {
 
 .footer-logo {
     width: 180px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .contact-box {
+        width: 80%;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .header-text {
+        font-size: 36px;
+    }
+
+    .portfolio-box {
+        width: 90%;
+    }
 }
