@@ -159,6 +159,18 @@ body {
     margin-top: 10px;
 }
 
+/* Social Link Hover Effect */
+.social-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    color: #8B5E3C;
+}
+
 /* Footer */
 footer {
     margin-top: auto;
@@ -172,7 +184,7 @@ footer {
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
-    .contact-box, .portfolio-box, .section-container {
+    .section-container, .portfolio-box, .contact-box {
         width: 90%;
     }
 
@@ -183,5 +195,9 @@ footer {
 
     .header-text {
         font-size: 36px;
+    }
+
+    .social-link {
+        font-size: 16px;
     }
 }
