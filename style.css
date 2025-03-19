@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: "Lora", serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     background-color: #E4E2DD;
     color: #333;
@@ -83,15 +83,41 @@ body {
     z-index: 1002;
 }
 
-/* Page Title (About Page) */
-.page-title {
-    font-family: "Playfair Display", serif;
-    font-size: 48px;
-    font-weight: 700;
-    margin-top: 20px;
+/* Top Logo */
+.top-logo {
+    width: 420px;
+    display: block;
+    margin: 20px auto 0px;
 }
 
-/* Section Container */
+/* Header */
+.header-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px; /* Directly under the logo */
+}
+
+/* Introduction Sentence */
+.intro-text {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 70%;
+    margin: 10px auto 30px;
+    line-height: 1.6;
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    width: 60%;
+    margin: 80px auto; /* Moves it lower */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Content Box */
 .section-container {
     max-width: 900px;
     margin: 40px auto;
@@ -100,34 +126,6 @@ body {
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    font-size: 22px;
-    line-height: 1.6;
-}
-
-/* About Page List */
-.about-list {
-    text-align: left;
-    list-style: none;
-    padding: 0;
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-.about-list li {
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.about-list li::before {
-    content: "•";
-    color: #8B5E3C;
-    font-size: 22px;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 3px;
 }
 
 /* Footer Logo */
@@ -138,5 +136,5 @@ footer {
 }
 
 .footer-logo {
-    width: 200px;
+    width: 180px;
 }
