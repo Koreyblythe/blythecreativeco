@@ -98,19 +98,23 @@ body {
     margin-top: 10px;
 }
 
-/* Introduction Bullet List */
-.services-list {
-    max-width: 600px;
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: center;
+    max-width: 800px;
     margin: 30px auto;
-    text-align: left;
+    text-align: center;
 }
 
-.services-list ul {
-    list-style-type: disc;
-    padding-left: 30px;
+.service-item {
+    background-color: #E4E2DD; /* Matching Background */
+    padding: 15px;
     font-size: 18px;
     font-weight: 600;
-    line-height: 1.8;
+    border-radius: 10px;
 }
 
 /* Contact Box */
@@ -165,7 +169,11 @@ footer {
         width: 90%;
     }
 
-    .services-list ul {
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-item {
         font-size: 16px;
     }
 
