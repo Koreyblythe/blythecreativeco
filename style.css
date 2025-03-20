@@ -102,19 +102,27 @@ body {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
+    align-items: center;
     max-width: 800px;
     margin: 30px auto;
     text-align: center;
 }
 
+/* Individual Service Items */
 .service-item {
     background-color: #E4E2DD; /* Matching Background */
     padding: 15px;
     font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    border-color: #8B5E3C;
 }
 
 /* Contact Box */
