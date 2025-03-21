@@ -3,65 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Blythe Creative</title>
+    <title>About | Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Sidebar Toggle Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <!-- Sidebar Navigation -->
-    <nav class="sidebar">
+    <div class="sidebar" id="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="packages.html">Marketing Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-
-    <div class="overlay" onclick="toggleMenu()"></div>
-
-    <header>
-        <h1 class="page-title">About Blythe Creative</h1>
-    </header>
-
-    <div class="section-container">
-        <p>
-            Blythe Creative is more than just a marketing agency. It’s a full-service branding and business strategy platform designed to help businesses create, grow, and dominate in their industries.
-        </p>
-
-        <h2>What I Do</h2>
-
-        <ul class="about-list">
-            <li><strong>Brand Identity Development:</strong> Crafting distinctive logos, branding elements, and brand messaging to establish a strong presence.</li>
-            <li><strong>Marketing Strategy:</strong> Tailoring marketing plans to help businesses engage their audience and maximize growth.</li>
-            <li><strong>Business Consulting:</strong> Providing strategic insights to refine business operations, client experience, and revenue models.</li>
-            <li><strong>Social Media Management:</strong> Helping brands grow their social media presence with professional content strategies.</li>
-            <li><strong>Advertising Campaigns:</strong> Designing and launching digital ad campaigns that attract and convert new customers.</li>
-        </ul>
-
-        <p>
-            I work with startups, small businesses, and established brands to elevate their marketing efforts and improve customer engagement.
-        </p>
     </div>
 
-    <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
-    </footer>
+    <!-- Sidebar Toggle Button -->
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector('.sidebar').classList.toggle('active');
-            document.querySelector('.overlay').classList.toggle('active');
-        }
-    </script>
+    <section class="section-container">
+        <h2>About Blythe Creative</h2>
+        <p>Blythe Creative provides expert **branding, marketing, and business consulting services** to help businesses establish a powerful identity.</p>
+
+        <ul class="bullet-grid">
+            <li>Custom Logo & Brand Identity</li>
+            <li>Marketing Strategy & Consulting</li>
+            <li>Social Media Growth & Management</li>
+            <li>Business Development & Scaling</li>
+        </ul>
+    </section>
+
+    <!-- Footer Logo -->
+    <footer>
+        <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
+    </footer>
 
 </body>
 </html>
