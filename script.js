@@ -6,20 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleSidebar() {
         sidebar.classList.toggle("active");
         overlay.classList.toggle("active");
-
-        // Hide menu toggle button when sidebar is open
-        if (sidebar.classList.contains("active")) {
-            menuToggle.style.display = "none";
-        } else {
-            menuToggle.style.display = "block";
-        }
+        menuToggle.style.display = sidebar.classList.contains("active") ? "none" : "block";
     }
 
     menuToggle.addEventListener("click", toggleSidebar);
     overlay.addEventListener("click", toggleSidebar);
 
-    // Ensure sidebar closes when a link is clicked
-    document.querySelectorAll(".sidebar ul li a").forEach(link => {
-        link.addEventListener("click", toggleSidebar);
-    });
+    // Cycling Services
+    const services = [
+        "Logo Design",
+        "Brand Identity",
+        "Social Media Management",
+        "Marketing Consulting"
+    ];
+    let serviceIndex = 0;
+    function cycleServices() {
+        document.getElementById("cycling-services").textContent = services[serviceIndex];
+        serviceIndex = (serviceIndex + 1) % services.length;
+    }
+    setInterval(cycleServices, 2500);
 });
