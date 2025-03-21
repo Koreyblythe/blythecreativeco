@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Blythe Creative</title>
+    <title>About | Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="packages.html">Marketing Packages</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </div>
 
@@ -23,33 +23,28 @@
     <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
 
     <section class="section-container">
-        <h2>Portfolio</h2>
+        <h2>About Blythe Creative</h2>
+        <p>Blythe Creative provides expert **branding, marketing, and business consulting services** to help businesses establish a powerful identity.</p>
 
-        <h3>Topp Shape Fitness</h3>
-        <p>Services provided:</p>
         <ul class="bullet-grid">
-            <li>Ad campaign creation</li>
-            <li>Social media management</li>
-            <li>Marketing consulting</li>
-            <li>Endorsement strategies</li>
+            <li>Custom Logo & Brand Identity</li>
+            <li>Marketing Strategy & Consulting</li>
+            <li>Social Media Growth & Management</li>
+            <li>Business Development & Scaling</li>
         </ul>
-        <p>Find them on <a href="https://www.facebook.com/topp95" class="instagram-link">Facebook</a> & <a href="https://instagram.com/toppshapefit" class="instagram-link">Instagram</a></p>
-
-        <h3>Nailed by Tay</h3>
-        <p>Services provided:</p>
-        <ul class="bullet-grid">
-            <li>Logo design</li>
-            <li>Pricing & policy updates</li>
-            <li>Instagram brand refresh</li>
-            <li>Business consulting</li>
-        </ul>
-        <p>Find them on <a href="https://instagram.com/nailed.by.tay" class="instagram-link">Instagram</a></p>
     </section>
 
     <!-- Footer Logo -->
     <footer>
         <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
     </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
