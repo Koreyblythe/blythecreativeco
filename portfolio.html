@@ -5,56 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
-    <div class="sidebar" id="sidebar">
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+    <nav class="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="packages.html">Marketing Packages</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
-    </div>
-
-    <!-- Sidebar Toggle Button -->
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+    </nav>
+    <div class="overlay" onclick="toggleSidebar()"></div>
 
     <section class="section-container">
-        <h2>Portfolio</h2>
+        <h1>Portfolio</h1>
 
-        <h3>Topp Shape Fitness</h3>
-        <ul class="bullet-grid">
-            <li>Ad campaign creation</li>
-            <li>Social media management</li>
-            <li>Marketing consulting</li>
-            <li>Endorsement strategies</li>
-        </ul>
-        <p>Find them on <a href="https://www.facebook.com/topp95" class="instagram-link">Facebook</a> & <a href="https://instagram.com/toppshapefit" class="instagram-link">Instagram</a></p>
+        <div class="portfolio-item">
+            <h2>Topp Shape Fitness</h2>
+            <p>Provided social media management, ad creation, consulting, and endorsement strategies.</p>
+            <p><strong>Social Links:</strong> <a href="https://www.facebook.com/topp95" class="instagram-link">Facebook</a> | <a href="https://instagram.com/toppshapefit" class="instagram-link">@toppshapefit</a></p>
+        </div>
 
-        <h3>Nailed by Tay</h3>
-        <ul class="bullet-grid">
-            <li>Logo design</li>
-            <li>Pricing & policy updates</li>
-            <li>Instagram brand refresh</li>
-            <li>Business consulting</li>
-        </ul>
-        <p>Find them on <a href="https://instagram.com/nailed.by.tay" class="instagram-link">Instagram</a></p>
+        <div class="portfolio-item">
+            <h2>Nailed by Tay</h2>
+            <p>Created logo, pricing list, and Instagram overhaul with business policies.</p>
+            <p><strong>Social Links:</strong> <a href="https://instagram.com/nailed.by.tay" class="instagram-link">@nailed.by.tay</a></p>
+        </div>
     </section>
 
-    <!-- Footer Logo -->
     <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
+        <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo">
     </footer>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("active");
-        }
-    </script>
 
 </body>
 </html>
