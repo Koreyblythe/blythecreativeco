@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Blythe Creative</title>
+    <title>About - Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- Sidebar Navigation -->
     <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
     <nav class="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Packages</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="overlay" onclick="toggleSidebar()"></div>
 
-    <section class="section-container">
-        <h1>About Blythe Creative</h1>
-        <p>We craft strategic brand identities and marketing solutions designed for impact.</p>
+    <h1 class="header-text">About Blythe Creative</h1>
 
-        <div class="about-grid">
-            <div class="about-card">
-                <i class="fas fa-paint-brush"></i>
-                <h2>Brand Identity</h2>
-                <p>Custom logos, typography, and brand aesthetics that define your business.</p>
-            </div>
-
-            <div class="about-card">
-                <i class="fas fa-bullhorn"></i>
-                <h2>Marketing Strategy</h2>
-                <p>Comprehensive marketing plans tailored to your audience.</p>
-            </div>
-
-            <div class="about-card">
-                <i class="fas fa-chart-line"></i>
-                <h2>Business Growth</h2>
-                <p>Scalable business strategies for expansion and brand authority.</p>
-            </div>
+    <div class="about-sections">
+        <div class="about-box">
+            <img src="logo-transparent.png" alt="Brand Identity" class="about-icon">
+            <h2>Brand Identity</h2>
+            <p>We create distinctive logos, branding elements, and messaging that define your business.</p>
         </div>
-    </section>
+        <div class="about-box">
+            <img src="logo-transparent.png" alt="Marketing Strategy" class="about-icon">
+            <h2>Marketing Strategy</h2>
+            <p>Our strategic marketing campaigns engage audiences and drive business growth.</p>
+        </div>
+        <div class="about-box">
+            <img src="logo-transparent.png" alt="Social Media" class="about-icon">
+            <h2>Social Media</h2>
+            <p>From content creation to engagement strategies, we help businesses grow their online presence.</p>
+        </div>
+        <div class="about-box">
+            <img src="logo-transparent.png" alt="Consulting" class="about-icon">
+            <h2>Business Consulting</h2>
+            <p>We provide expert insights to optimize business operations and branding strategies.</p>
+        </div>
+    </div>
 
     <footer>
         <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo">
