@@ -93,36 +93,19 @@ body {
 /* Header Font (Playfair Display) */
 .header-text {
     font-family: "Playfair Display", serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
     margin-top: 10px;
 }
 
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-/* Individual Service Items */
-.service-item {
-    background-color: #E4E2DD; /* Matching Background */
-    padding: 15px;
+/* Introduction Section */
+.intro-text {
+    font-family: "Lora", serif;
     font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.service-item:hover {
-    border-color: #8B5E3C;
+    font-weight: 500;
+    max-width: 70%;
+    margin: 10px auto 30px;
+    line-height: 1.6;
 }
 
 /* Contact Box */
@@ -136,6 +119,21 @@ body {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Bullet Point Grid */
+.bullet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bullet-grid li {
+    list-style-type: disc;
+    font-size: 18px;
+}
+
 /* Page Content Box */
 .section-container {
     max-width: 900px;
@@ -145,22 +143,26 @@ body {
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    width: 60%;
 }
 
-/* Social Link Hover Effect */
-.social-link {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+/* Portfolio & About Page Boxes */
+.section-container h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.social-link:hover {
+/* Instagram Link Styling */
+a.instagram-link {
     color: #8B5E3C;
+    font-weight: bold;
 }
 
-/* Footer */
+a.instagram-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Logo */
 footer {
     margin-top: auto;
     padding: 40px;
@@ -171,25 +173,57 @@ footer {
     width: 180px;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-    .section-container, .contact-box {
-        width: 90%;
-    }
+/* Marketing Packages Page */
+.packages {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
 
-    .services-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.packages h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
 
-    .service-item {
-        font-size: 16px;
-    }
+.packages p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
 
-    .header-text {
-        font-size: 36px;
-    }
+.package {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .social-link {
-        font-size: 16px;
-    }
+.package h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.purchase-button {
+    display: inline-block;
+    background-color: #8B5E3C;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.purchase-button:hover {
+    background-color: #6a4228;
 }
