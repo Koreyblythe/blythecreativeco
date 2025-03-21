@@ -3,77 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Blythe Creative</title>
+    <title>Portfolio | Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Sidebar Toggle Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <!-- Sidebar Navigation -->
-    <nav class="sidebar">
+    <div class="sidebar" id="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="packages.html">Marketing Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-
-    <div class="overlay" onclick="toggleMenu()"></div>
-
-    <header>
-        <h1 class="header-text">Portfolio</h1>
-    </header>
-
-    <div class="portfolio-container">
-
-        <!-- Topp Shape Fitness Box -->
-        <div class="section-container">
-            <h2>Topp Shape Fitness</h2>
-            <p><strong>Overview:</strong> Blythe Creative partnered with Topp Shape Fitness to enhance their digital presence, optimize branding strategies, and increase audience engagement.</p>
-            <p><strong>Services Provided:</strong></p>
-            <ul class="portfolio-list">
-                <li>**Social Media Advertising:** Developed targeted ad campaigns to attract potential members and increase gym sign-ups.</li>
-                <li>**Content Strategy & Social Media Management:** Managed their Instagram and Facebook accounts, ensuring high engagement and professional branding.</li>
-                <li>**Brand Consultation:** Assisted with positioning and brand identity strategies to maintain consistency across platforms.</li>
-                <li>**Endorsement Strategies:** Identified potential brand partnerships to strengthen their market influence.</li>
-            </ul>
-            <p><strong>Social Media:</strong>  
-                <a href="https://www.facebook.com/topp95" target="_blank" class="social-link">Facebook</a> |  
-                <a href="https://instagram.com/toppshapefit" target="_blank" class="social-link">@toppshapefit</a>
-            </p>
-        </div>
-
-        <!-- Nailed by Tay Box -->
-        <div class="section-container">
-            <h2>Nailed by Tay</h2>
-            <p><strong>Overview:</strong> For Nailed by Tay, Blythe Creative provided a complete brand refresh, modernizing her image while improving business operations and customer experience.</p>
-            <p><strong>Services Provided:</strong></p>
-            <ul class="portfolio-list">
-                <li>**Logo & Branding:** Designed a high-quality, modern logo that reflects the brand’s aesthetic.</li>
-                <li>**Business Structuring:** Created a professional pricing list and policy guide to streamline client bookings.</li>
-                <li>**Instagram Rebranding:** Transformed her Instagram page into a visually appealing, cohesive business profile.</li>
-                <li>**Strategic Consulting:** Provided tailored advice to improve business growth and customer engagement.</li>
-            </ul>
-            <p><strong>Social Media:</strong>  
-                <a href="https://instagram.com/nailed.by.tay" target="_blank" class="social-link">@nailed.by.tay</a>
-            </p>
-        </div>
-
     </div>
 
-    <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Footer Logo" class="footer-logo">
-    </footer>
+    <!-- Sidebar Toggle Button -->
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector('.sidebar').classList.toggle('active');
-            document.querySelector('.overlay').classList.toggle('active');
-        }
-    </script>
+    <section class="section-container">
+        <h2>Portfolio</h2>
+
+        <h3>Topp Shape Fitness</h3>
+        <p>Services provided:</p>
+        <ul class="bullet-grid">
+            <li>Ad campaign creation</li>
+            <li>Social media management</li>
+            <li>Marketing consulting</li>
+            <li>Endorsement strategies</li>
+        </ul>
+        <p>Find them on <a href="https://www.facebook.com/topp95" class="instagram-link">Facebook</a> & <a href="https://instagram.com/toppshapefit" class="instagram-link">Instagram</a></p>
+
+        <h3>Nailed by Tay</h3>
+        <p>Services provided:</p>
+        <ul class="bullet-grid">
+            <li>Logo design</li>
+            <li>Pricing & policy updates</li>
+            <li>Instagram brand refresh</li>
+            <li>Business consulting</li>
+        </ul>
+        <p>Find them on <a href="https://instagram.com/nailed.by.tay" class="instagram-link">Instagram</a></p>
+    </section>
+
+    <!-- Footer Logo -->
+    <footer>
+        <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
+    </footer>
 
 </body>
 </html>
