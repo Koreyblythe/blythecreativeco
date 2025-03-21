@@ -3,78 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Blythe Creative</title>
+    <title>About Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+    <nav class="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="overlay" onclick="toggleSidebar()"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="section-container">
         <h1>About Blythe Creative</h1>
-        <p>Your Vision, Our Strategy – Creating Brands That Resonate.</p>
-    </section>
+        <p>We craft strategic brand identities and marketing solutions designed for impact.</p>
 
-    <!-- About Section -->
-    <section class="about-container">
-        <h2>What We Do</h2>
-        <p>Blythe Creative provides expert <span class="highlight">branding, marketing, and business consulting</span> services to help businesses establish a powerful identity.</p>
-
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="icons/branding.png" alt="Branding Icon">
-                <h3>Custom Logo & Brand Identity</h3>
-                <p>We craft unique logos, color palettes, and brand elements that establish a lasting brand presence.</p>
+        <div class="about-grid">
+            <div class="about-card">
+                <i class="fas fa-paint-brush"></i>
+                <h2>Brand Identity</h2>
+                <p>Custom logos, typography, and brand aesthetics that define your business.</p>
             </div>
 
-            <div class="service-item">
-                <img src="icons/strategy.png" alt="Strategy Icon">
-                <h3>Marketing Strategy & Consulting</h3>
-                <p>Strategic insights and tailored marketing plans to help businesses reach their target audience.</p>
+            <div class="about-card">
+                <i class="fas fa-bullhorn"></i>
+                <h2>Marketing Strategy</h2>
+                <p>Comprehensive marketing plans tailored to your audience.</p>
             </div>
 
-            <div class="service-item">
-                <img src="icons/social-media.png" alt="Social Media Icon">
-                <h3>Social Media Growth & Management</h3>
-                <p>Building strong online communities with engaging content strategies and audience growth techniques.</p>
-            </div>
-
-            <div class="service-item">
-                <img src="icons/business.png" alt="Business Development Icon">
-                <h3>Business Development & Scaling</h3>
-                <p>Helping businesses refine operations, enhance client experience, and maximize revenue growth.</p>
+            <div class="about-card">
+                <i class="fas fa-chart-line"></i>
+                <h2>Business Growth</h2>
+                <p>Scalable business strategies for expansion and brand authority.</p>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Transform Your Brand Today</h2>
-        <p>Work with Blythe Creative to build a compelling brand identity and marketing strategy that works.</p>
-        <a href="contact.html" class="cta-button">Get Started</a>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
+        <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo">
     </footer>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector('.sidebar').classList.toggle('active');
-        }
-    </script>
 
 </body>
 </html>
