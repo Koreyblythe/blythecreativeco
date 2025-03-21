@@ -85,17 +85,17 @@ body {
 
 /* Top Logo */
 .top-logo {
-    width: 420px;
+    width: 450px;
     display: block;
-    margin: 20px auto 0px;
+    margin: 30px auto 0;
 }
 
 /* Header Font (Playfair Display) */
 .header-text {
     font-family: "Playfair Display", serif;
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Introduction Section */
@@ -104,19 +104,8 @@ body {
     font-size: 18px;
     font-weight: 500;
     max-width: 70%;
-    margin: 10px auto 30px;
+    margin: 15px auto 30px;
     line-height: 1.6;
-}
-
-/* Contact Box */
-.contact-box {
-    background-color: white;
-    color: black;
-    padding: 30px;
-    border-radius: 12px;
-    width: 60%;
-    margin: 80px auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Bullet Point Grid */
@@ -125,13 +114,26 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
 .bullet-grid li {
     list-style-type: disc;
     font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: white;
+    color: black;
+    padding: 25px;
+    border-radius: 12px;
+    width: 55%;
+    margin: 80px auto;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Page Content Box */
@@ -148,7 +150,7 @@ body {
 /* Portfolio & About Page Boxes */
 .section-container h2 {
     font-family: "Playfair Display", serif;
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 15px;
 }
 
@@ -170,7 +172,7 @@ footer {
 }
 
 .footer-logo {
-    width: 180px;
+    width: 200px;
 }
 
 /* Marketing Packages Page */
