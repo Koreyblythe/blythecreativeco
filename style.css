@@ -19,7 +19,7 @@ body {
     top: 0;
     width: 250px;
     height: 100%;
-    background: #333;
+    background-color: #333;
     padding-top: 80px;
     transition: left 0.3s ease-in-out;
     z-index: 1001;
@@ -29,13 +29,32 @@ body {
     left: 0;
 }
 
+/* Sidebar Overlay (Click to Close) */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar.active + .overlay {
+    display: block;
+}
+
+/* Sidebar Menu */
 .sidebar ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
     padding: 15px;
+    text-align: left;
 }
 
 .sidebar ul li a {
@@ -43,14 +62,14 @@ body {
     text-decoration: none;
     font-size: 18px;
     display: block;
-    transition: 0.3s;
+    transition: background 0.3s ease-in-out;
 }
 
 .sidebar ul li a:hover {
     background-color: #8B5E3C;
 }
 
-/* Sidebar Toggle */
+/* Sidebar Toggle Button */
 .menu-toggle {
     position: fixed;
     left: 15px;
@@ -62,156 +81,89 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     z-index: 1002;
-    transition: background 0.3s;
-}
-
-.menu-toggle:hover {
-    background: #8B5E3C;
+    display: block;
 }
 
 /* Top Logo */
 .top-logo {
     width: 420px;
     display: block;
-    margin: 20px auto 0;
-    transition: transform 0.3s ease-in-out;
+    margin: 20px auto 0px;
 }
 
-.top-logo:hover {
-    transform: scale(1.05);
-}
-
-/* Header & Intro */
+/* Header Font (Playfair Display) */
 .header-text {
     font-family: "Playfair Display", serif;
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 700;
     margin-top: 10px;
-    text-transform: uppercase;
 }
 
-/* Smooth Section Transitions */
-.section-container, .about-container, .portfolio-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fade-in 0.8s ease-in-out forwards;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Introduction Section */
+.intro-text {
+    font-family: "Lora", serif;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 70%;
+    margin: 10px auto 30px;
+    line-height: 1.6;
 }
 
 /* Contact Box */
 .contact-box {
-    background: white;
+    background-color: white;
+    color: black;
     padding: 30px;
     border-radius: 12px;
     width: 60%;
     margin: 80px auto;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.contact-box:hover {
-    transform: scale(1.02);
-}
-
-/* Services Rotating Text */
-.services-rotator {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px auto;
+/* Bullet Point Grid */
+.bullet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     text-align: center;
-    max-width: 60%;
-    animation: fade-in 2s ease-in-out;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
-/* About Page Icons */
-.about-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+.bullet-grid li {
+    list-style-type: disc;
+    font-size: 18px;
 }
 
-.about-icons i {
-    font-size: 30px;
-    color: #8B5E3C;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-icons i:hover {
-    transform: scale(1.2);
-}
-
-/* Portfolio Sections */
-.portfolio-section {
+/* Page Content Box */
+.section-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
     background: white;
-    padding: 20px;
-    margin: 15px 0;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-.portfolio-section:hover {
-    transform: scale(1.02);
-}
-
-/* Call to Action */
-.cta {
-    background: #8B5E3C;
-    color: white;
-    padding: 40px;
-    margin-top: 40px;
-}
-
-.cta h2 {
-    font-size: 28px;
+/* Portfolio & About Page Boxes */
+.section-container h2 {
     font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.cta-button {
-    display: inline-block;
-    background: white;
-    color: #8B5E3C;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background: #E4E2DD;
-}
-
-/* Social Media Links */
+/* Instagram Link Styling */
 a.instagram-link {
     color: #8B5E3C;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 a.instagram-link:hover {
     text-decoration: underline;
-    transform: scale(1.1);
 }
 
-/* Footer */
+/* Footer Logo */
 footer {
     margin-top: auto;
     padding: 40px;
@@ -219,11 +171,60 @@ footer {
 }
 
 .footer-logo {
-    width: 200px;
-    margin: 20px auto;
-    transition: transform 0.3s;
+    width: 180px;
 }
 
-.footer-logo:hover {
-    transform: scale(1.05);
+/* Marketing Packages Page */
+.packages {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.packages h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.packages p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.package {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.purchase-button {
+    display: inline-block;
+    background-color: #8B5E3C;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.purchase-button:hover {
+    background-color: #6a4228;
 }
