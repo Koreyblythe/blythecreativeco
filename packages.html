@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Packages | Blythe Creative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="packages.html">Marketing Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <!-- Marketing Packages Section -->
+    <section class="packages">
+        <h1>Marketing Packages</h1>
+        <p>Choose a package that fits your business needs and take your brand to the next level.</p>
+
+        <div class="package">
+            <h2>Essentials Package</h2>
+            <p>Jumpstart your brand with a tailored marketing strategy guide, designed to enhance your brand’s presence and engagement.</p>
+            <a href="https://buy.stripe.com/5kA4iGanv6BQ24g3cc" class="purchase-button">Purchase Now</a>
+        </div>
+
+        <div class="package">
+            <h2>Growth Package</h2>
+            <p>Take your brand to the next level with advanced advertising strategies, competitor analysis, and audience targeting insights.</p>
+            <a href="https://buy.stripe.com/fZe3eCfHPaS6dMY6op" class="purchase-button">Purchase Now</a>
+        </div>
+
+        <div class="package">
+            <h2>Elite Consultation</h2>
+            <p>Work 1-on-1 with an expert for personalized brand consulting, strategy planning, and actionable marketing solutions.</p>
+            <a href="https://buy.stripe.com/bIYbL87bj7FU24g002" class="purchase-button">Purchase Now</a>
+        </div>
+    </section>
+
+    <!-- Footer Logo -->
+    <footer>
+        <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
