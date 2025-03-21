@@ -28,18 +28,10 @@
     <!-- Header -->
     <h1 class="header-text">Leave Your Creative Mark</h1>
 
-    <!-- Introduction Bullet Grid -->
-    <ul class="bullet-grid">
-        <li>Professional Logo Design</li>
-        <li>Brand Identity Development</li>
-        <li>Marketing Strategy Consulting</li>
-        <li>Social Media Management</li>
-        <li>Advertising & Campaigns</li>
-        <li>Creative Content Development</li>
-        <li>Competitor & Market Research</li>
-        <li>Business Growth Planning</li>
-        <li>Customer Engagement Strategies</li>
-    </ul>
+    <!-- Rotating Services Animation -->
+    <p class="cycling-text">
+        We specialize in <span id="changingText">logo design</span>.
+    </p>
 
     <!-- Contact Box -->
     <section class="contact-box" id="contact">
@@ -60,6 +52,25 @@
             const sidebar = document.getElementById("sidebar");
             sidebar.classList.toggle("active");
         }
+
+        // Rotating Services Animation
+        const services = [
+            "logo design",
+            "brand identity",
+            "social media management",
+            "strategic marketing consulting",
+            "content creation",
+            "advertising campaigns",
+            "business branding solutions"
+        ];
+        let index = 0;
+
+        function changeText() {
+            index = (index + 1) % services.length;
+            document.getElementById("changingText").innerText = services[index];
+        }
+
+        setInterval(changeText, 2000); // Change every 2 seconds
     </script>
 
 </body>
