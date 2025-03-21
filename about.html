@@ -3,46 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Blythe Creative</title>
+    <title>About - Blythe Creative</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Sidebar Navigation -->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="packages.html">Marketing Packages</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <!-- Sidebar Toggle Button -->
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-
-    <section class="section-container">
-        <h2>About Blythe Creative</h2>
-        <p>Blythe Creative provides expert **branding, marketing, and business consulting services** to help businesses establish a powerful identity.</p>
-
-        <ul class="bullet-grid">
-            <li>Custom Logo & Brand Identity</li>
-            <li>Marketing Strategy & Consulting</li>
-            <li>Social Media Growth & Management</li>
-            <li>Business Development & Scaling</li>
-        </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About Blythe Creative</h1>
+        <p>Your Vision, Our Strategy – Creating Brands That Resonate.</p>
     </section>
 
-    <!-- Footer Logo -->
+    <!-- About Section -->
+    <section class="about-container">
+        <h2>What We Do</h2>
+        <p>Blythe Creative provides expert <span class="highlight">branding, marketing, and business consulting</span> services to help businesses establish a powerful identity.</p>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="icons/branding.png" alt="Branding Icon">
+                <h3>Custom Logo & Brand Identity</h3>
+                <p>We craft unique logos, color palettes, and brand elements that establish a lasting brand presence.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="icons/strategy.png" alt="Strategy Icon">
+                <h3>Marketing Strategy & Consulting</h3>
+                <p>Strategic insights and tailored marketing plans to help businesses reach their target audience.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="icons/social-media.png" alt="Social Media Icon">
+                <h3>Social Media Growth & Management</h3>
+                <p>Building strong online communities with engaging content strategies and audience growth techniques.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="icons/business.png" alt="Business Development Icon">
+                <h3>Business Development & Scaling</h3>
+                <p>Helping businesses refine operations, enhance client experience, and maximize revenue growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Transform Your Brand Today</h2>
+        <p>Work with Blythe Creative to build a compelling brand identity and marketing strategy that works.</p>
+        <a href="contact.html" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <img src="footer-logo.png" alt="Blythe Creative Logo" class="footer-logo">
     </footer>
 
     <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("active");
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
         }
     </script>
 
