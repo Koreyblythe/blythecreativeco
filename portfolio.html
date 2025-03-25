@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Blythe Creative</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Blythe Creative</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-    <nav class="sidebar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="overlay" onclick="toggleSidebar()"></div>
+  <!-- Sidebar Toggle -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" onclick="closeMenu()"></div>
+
+  <!-- Main Content -->
+  <div class="section-container">
     <h1 class="header-text">Portfolio</h1>
-
-    <section class="portfolio-item">
-        <h2>Topp Shape Fitness</h2>
-        <p>We helped Topp Shape Fitness expand their brand with:</p>
+    
+    <div class="portfolio-section">
+      <h2 class="business-title">Topp Shape Fitness</h2>
+      <div class="portfolio-box">
         <ul>
-            <li>Custom marketing & digital ad campaigns</li>
-            <li>Social media management & content strategy</li>
-            <li>Brand consulting for enhanced audience reach</li>
-            <li>Influencer endorsement strategies</li>
+          <li>Created branded fitness ad campaigns for Instagram and Facebook</li>
+          <li>Developed content strategy and managed social media presence</li>
+          <li>Provided consulting to align visual identity with target market</li>
+          <li>Advised on endorsements and community engagement efforts</li>
+          <li>Boosted awareness with consistent, engaging branding</li>
         </ul>
-        <p>Follow them: <a href="https://www.facebook.com/topp95" class="highlight-link" target="_blank">Facebook</a> | <span class="highlight-link">@toppshapefit</span></p>
-    </section>
+        <p>
+          Visit: 
+          <a href="https://www.facebook.com/topp95" target="_blank" class="portfolio-link">Facebook</a> | 
+          <a href="https://instagram.com/toppshapefit" target="_blank" class="portfolio-link">@toppshapefit</a>
+        </p>
+      </div>
 
-    <section class="portfolio-item">
-        <h2>Nailed by Tay</h2>
-        <p>We transformed Nailed by Tay’s digital presence through:</p>
+      <h2 class="business-title">Nailed by Tay</h2>
+      <div class="portfolio-box">
         <ul>
-            <li>Brand identity & logo design</li>
-            <li>Updated pricing & business policies</li>
-            <li>Instagram revamp & cohesive aesthetic</li>
-            <li>Consulting for long-term social media growth</li>
+          <li>Designed custom logo for brand identity</li>
+          <li>Created professional service pricing list for Instagram highlights</li>
+          <li>Rebranded overall page layout and Instagram aesthetic</li>
+          <li>Drafted policy list for customer transparency and professionalism</li>
+          <li>Consulted on content strategy and consistency</li>
         </ul>
-        <p>Follow her: <span class="highlight-link">@nailed.by.tay</span></p>
-    </section>
+        <p>
+          Visit: 
+          <a href="https://instagram.com/nailed.by.tay" target="_blank" class="portfolio-link">@nailed.by.tay</a>
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo">
-    </footer>
+  <footer>
+    <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo"/>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.querySelector('.overlay').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.overlay').classList.remove('active');
+    }
+  </script>
 
 </body>
 </html>
