@@ -1,33 +1,28 @@
-/* Root Theme Colors */
-:root {
-  --accent-color: #333333;
-  --background-color: #E4E2DD;
-  --text-color: #333333;
-  --highlight: #8B5E3C;
-}
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap');
 
-/* General Styles */
+/* GLOBAL STYLES */
 body {
   font-family: "Lora", serif;
-  text-align: center;
-  background-color: var(--background-color);
-  color: var(--text-color);
   margin: 0;
   padding: 0;
+  background-color: #E4E2DD;
+  color: #333;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  text-align: center;
 }
 
-/* Sidebar Navigation */
+/* SIDEBAR */
 .sidebar {
   position: fixed;
   left: -250px;
   top: 0;
   width: 250px;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: #333;
   padding-top: 80px;
   transition: left 0.3s ease-in-out;
   z-index: 1001;
@@ -68,35 +63,40 @@ body {
   text-decoration: none;
   font-size: 18px;
   display: block;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s;
 }
 
 .sidebar ul li a:hover {
-  background-color: var(--highlight);
+  background-color: #2B2B2B;
 }
 
-/* Sidebar Toggle Button */
+/* TOGGLE */
 .menu-toggle {
   position: fixed;
   left: 15px;
   top: 15px;
   font-size: 24px;
   cursor: pointer;
-  background: var(--accent-color);
+  background: #333;
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
   z-index: 1002;
 }
 
-/* Top Logo */
+/* LOGOS */
 .top-logo {
   width: 420px;
   display: block;
-  margin: 20px auto 0px;
+  margin: 20px auto 0;
 }
 
-/* Header Font */
+.footer-logo {
+  width: 180px;
+  margin-top: 40px;
+}
+
+/* HEADERS */
 .header-text {
   font-family: "Playfair Display", serif;
   font-size: 36px;
@@ -104,17 +104,21 @@ body {
   margin-top: 10px;
 }
 
-/* Cycling Text */
 .intro-text {
-  font-family: "Lora", serif;
-  font-size: 20px;
-  font-weight: 500;
-  max-width: 75%;
-  margin: 15px auto 30px;
+  font-size: 18px;
+  max-width: 70%;
+  margin: 10px auto 30px;
   line-height: 1.6;
 }
 
-/* Contact Box */
+/* CAROUSEL (if used) */
+#carousel {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* CONTACT BOX */
 .contact-box {
   background-color: white;
   color: black;
@@ -125,92 +129,47 @@ body {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Bullet Point Grid on Home */
-.bullet-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  text-align: center;
-  max-width: 80%;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.bullet-grid li {
-  list-style-type: disc;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Section Wrapper */
+/* SECTION BOX */
 .section-container {
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Shared Headings */
-.section-container h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 30px;
-  margin-bottom: 15px;
-  color: var(--accent-color);
+/* ABOUT / PORTFOLIO GRID */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
-/* Instagram/External Link Styling */
-a.instagram-link,
-a.portfolio-link {
-  color: var(--accent-color);
-  font-weight: bold;
-  text-decoration: none;
+.info-box {
+  background: #f6f5f2;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-a.instagram-link:hover,
-a.portfolio-link:hover {
-  text-decoration: underline;
+.info-box i {
+  font-size: 26px;
+  color: #2B2B2B;
+  margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-  margin-top: auto;
-  padding: 40px;
-  text-align: center;
-}
-
-.footer-logo {
-  width: 180px;
-}
-
-/* Marketing Packages */
+/* PACKAGES */
 .packages {
   text-align: center;
   margin: 50px auto;
   max-width: 800px;
 }
 
-.packages h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.packages p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-}
-
 .package {
   background-color: white;
   padding: 20px;
-  margin: 15px 0;
+  margin: 20px 0;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -227,49 +186,61 @@ footer {
 
 .purchase-button {
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: #2B2B2B;
   color: white;
   padding: 12px 20px;
   font-size: 16px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s;
 }
 
 .purchase-button:hover {
-  background-color: #111;
+  background-color: #1f1f1f;
 }
 
-/* Portfolio Enhancements */
-.portfolio-section {
-  text-align: left;
-  margin-top: 30px;
+/* LINKS */
+a.instagram-link,
+a:link,
+a:visited {
+  color: #2B2B2B;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.business-title {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  color: var(--accent-color);
-  margin-top: 40px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+a:hover {
+  text-decoration: underline;
 }
 
-.portfolio-box {
-  background-color: white;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: transparent;
+  margin-top: auto;
 }
 
-.portfolio-box ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-logo {
+    width: 300px;
+  }
 
-.portfolio-box li {
-  margin-bottom: 10px;
-  font-size: 17px;
+  .contact-box,
+  .section-container {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-text {
+    font-size: 28px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
 }
