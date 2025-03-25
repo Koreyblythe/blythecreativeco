@@ -1,230 +1,275 @@
+/* Root Theme Colors */
+:root {
+  --accent-color: #333333;
+  --background-color: #E4E2DD;
+  --text-color: #333333;
+  --highlight: #8B5E3C;
+}
+
 /* General Styles */
 body {
-    font-family: "Lora", serif;
-    text-align: center;
-    background-color: #E4E2DD;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Lora", serif;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Sidebar Navigation */
 .sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    padding-top: 80px;
-    transition: left 0.3s ease-in-out;
-    z-index: 1001;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: var(--accent-color);
+  padding-top: 80px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
 }
 
 .sidebar.active {
-    left: 0;
+  left: 0;
 }
 
-/* Sidebar Overlay (Click to Close) */
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 .sidebar.active + .overlay {
-    display: block;
+  display: block;
 }
 
-/* Sidebar Menu */
 .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
-    padding: 15px;
-    text-align: left;
+  padding: 15px;
+  text-align: left;
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    transition: background 0.3s ease-in-out;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: background 0.3s ease-in-out;
 }
 
 .sidebar ul li a:hover {
-    background-color: #8B5E3C;
+  background-color: var(--highlight);
 }
 
 /* Sidebar Toggle Button */
 .menu-toggle {
-    position: fixed;
-    left: 15px;
-    top: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    background: #333;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    z-index: 1002;
-    display: block;
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1002;
 }
 
 /* Top Logo */
 .top-logo {
-    width: 420px;
-    display: block;
-    margin: 20px auto 0px;
+  width: 420px;
+  display: block;
+  margin: 20px auto 0px;
 }
 
-/* Header Font (Playfair Display) */
+/* Header Font */
 .header-text {
-    font-family: "Playfair Display", serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
 }
 
-/* Introduction Section */
+/* Cycling Text */
 .intro-text {
-    font-family: "Lora", serif;
-    font-size: 18px;
-    font-weight: 500;
-    max-width: 70%;
-    margin: 10px auto 30px;
-    line-height: 1.6;
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 75%;
+  margin: 15px auto 30px;
+  line-height: 1.6;
 }
 
 /* Contact Box */
 .contact-box {
-    background-color: white;
-    color: black;
-    padding: 30px;
-    border-radius: 12px;
-    width: 60%;
-    margin: 80px auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 60%;
+  margin: 80px auto;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Bullet Point Grid */
+/* Bullet Point Grid on Home */
 .bullet-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .bullet-grid li {
-    list-style-type: disc;
-    font-size: 18px;
+  list-style-type: disc;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-/* Page Content Box */
+/* Section Wrapper */
 .section-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-/* Portfolio & About Page Boxes */
+/* Shared Headings */
 .section-container h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--accent-color);
 }
 
-/* Instagram Link Styling */
-a.instagram-link {
-    color: #8B5E3C;
-    font-weight: bold;
+/* Instagram/External Link Styling */
+a.instagram-link,
+a.portfolio-link {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
 }
 
-a.instagram-link:hover {
-    text-decoration: underline;
+a.instagram-link:hover,
+a.portfolio-link:hover {
+  text-decoration: underline;
 }
 
-/* Footer Logo */
+/* Footer */
 footer {
-    margin-top: auto;
-    padding: 40px;
-    text-align: center;
+  margin-top: auto;
+  padding: 40px;
+  text-align: center;
 }
 
 .footer-logo {
-    width: 180px;
+  width: 180px;
 }
 
-/* Marketing Packages Page */
+/* Marketing Packages */
 .packages {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 800px;
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
 }
 
 .packages h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .packages p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
 
 .package {
-    background-color: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .package h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .package p {
-    font-size: 16px;
-    margin-bottom: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
 .purchase-button {
-    display: inline-block;
-    background-color: #8B5E3C;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out;
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
 }
 
 .purchase-button:hover {
-    background-color: #6a4228;
+  background-color: #111;
+}
+
+/* Portfolio Enhancements */
+.portfolio-section {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.business-title {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  color: var(--accent-color);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.portfolio-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.portfolio-box ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.portfolio-box li {
+  margin-bottom: 10px;
+  font-size: 17px;
 }
