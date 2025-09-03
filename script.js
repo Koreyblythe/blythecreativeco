@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const service = serviceSelect?.value || 'general';
       const message = contactForm.querySelector('#message')?.value?.trim() || '';
 
-      const to = 'info@blythecreatives.co';
+const to = 'KoreyBlythe@icloud.com';
       const subject = encodeURIComponent(`Inquiry – ${service === 'creative' ? 'Blythe Creative' : service === 'vending' ? 'Blythe Vending' : 'General'}`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}\n\n— Sent from blythecreatives.co`
