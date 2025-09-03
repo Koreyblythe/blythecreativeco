@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact page helpers
   const serviceSelect = document.querySelector('#service');
-  // Preselect by ?service=creative|vending
   const params = new URLSearchParams(window.location.search);
   const qService = params.get('service');
   if (serviceSelect && qService) {
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const service = serviceSelect?.value || 'general';
       const message = contactForm.querySelector('#message')?.value?.trim() || '';
 
-      const to = 'info@blythecreatives.co'; // update if needed
+      const to = 'info@blythecreatives.co';
       const subject = encodeURIComponent(`Inquiry – ${service === 'creative' ? 'Blythe Creative' : service === 'vending' ? 'Blythe Vending' : 'General'}`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}\n\n— Sent from blythecreatives.co`
