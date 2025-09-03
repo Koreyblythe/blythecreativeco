@@ -12,17 +12,17 @@ button { font: inherit; }
 
 /* Design tokens — using a refined deep slate brand background.
    Swap --bg and --surface if you provide an exact hex. */
-:root{
-  --brand:#e7e7ea;        /* primary on dark */
-  --brand-ink:#ffffff;    /* headings on dark */
-  --accent:#0EA5E9;       /* accent for dots/links */
-  --bg:#121316;           /* BRAND BACKGROUND (edit if needed) */
-  --surface:#17191c;      /* card surface slightly lighter than bg */
-  --text:#e7e7ea;         /* body text */
-  --muted:#9aa1ac;
-  --radius:12px;
-  --shadow:0 8px 30px rgba(0,0,0,.35);
-  --maxw:1120px;
+:root {
+  --brand: #2b282b;        /* dark ink (for text/headings) */
+  --brand-ink: #2b282b;
+  --accent: #0EA5E9;       /* accent blue */
+  --bg: #e4e2dd;           /* your logo background hex */
+  --surface: #ffffff;      /* white cards on beige */
+  --text: #2b282b;         /* dark body text */
+  --muted: #5c5c5c;        /* gray-muted */
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --maxw: 1120px;
 }
 
 /* Lock scheme so it always uses brand dark */
