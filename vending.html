@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blythe Vending — Reliable Machines & Service | Blythe Business Solutions</title>
+  <meta name="description" content="Blythe Vending provides reliable vending services—machine placement, restocking, maintenance, and cashless payments for schools, workplaces, and events." />
+  <meta property="og:title" content="Blythe Vending — Reliable Machines & Service" />
+  <meta property="og:description" content="Modern vending for workplaces, schools, and events. Placement, restocking, maintenance, and cashless options." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/images/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Blythe Business Solutions — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Blythe Business Solutions</span>
+      </a>
 
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="creative.html">Blythe Creative</a>
+        <a href="vending.html" aria-current="page">Blythe Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Toggle navigation" data-nav-toggle>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container stack">
+        <span class="eyebrow">Blythe Vending</span>
+        <h1>Modern vending, minimal hassle.</h1>
+        <p>Reliable machines, responsive service, and cashless payments—set up for your workplace, school, or event.</p>
+        <div class="btn-row" style="margin-top:10px;">
+          <a class="btn btn--primary" href="contact.html?service=vending">Request a Vending Machine</a>
+          <a class="btn btn--outline" href="creative.html">Looking for Creative?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p class="muted">Flexible solutions to keep your people stocked and satisfied.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="surface card">
+            <h3>Placement</h3>
+            <p class="muted">We deliver and set up vending machines at no upfront cost.</p>
+          </div>
+          <div class="surface card">
+            <h3>Restocking</h3>
+            <p class="muted">Regularly monitored inventory and quick replenishment.</p>
+          </div>
+          <div class="surface card">
+            <h3>Maintenance</h3>
+            <p class="muted">Fast service calls and ongoing upkeep to keep machines running.</p>
+          </div>
+          <div class="surface card">
+            <h3>Cashless Payments</h3>
+            <p class="muted">Modern readers that accept debit, credit, and mobile pay.</p>
+          </div>
+          <div class="surface card">
+            <h3>Custom Branding</h3>
+            <p class="muted">Optional wraps to match your workplace or school identity.</p>
+          </div>
+          <div class="surface card">
+            <h3>Route Coverage</h3>
+            <p class="muted">Serving Southern Illinois and surrounding areas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Machine types -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Machine Options</h2>
+          <p class="muted">Choose the mix that fits your location best.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="surface card">
+            <h3>Snack</h3>
+            <p class="muted">Chips, candy, and healthy grab-and-go options.</p>
+          </div>
+          <div class="surface card">
+            <h3>Drink</h3>
+            <p class="muted">Cold beverages from water to energy drinks.</p>
+          </div>
+          <div class="surface card">
+            <h3>Combo</h3>
+            <p class="muted">One unit for both snacks and drinks—space efficient.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container surface card center">
+        <h2>Let’s get your location covered.</h2>
+        <p class="muted">We’ll handle placement, service, and restocking—you get hassle-free vending.</p>
+        <div class="btn-row" style="justify-content:center; margin-top:10px;">
+          <a class="btn btn--primary" href="contact.html?service=vending">Request a Machine</a>
+          <a class="btn btn--outline" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      <div class="footer-nav">
+        <a href="creative.html">Creative</a>
+        <a href="vending.html" aria-current="page">Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
