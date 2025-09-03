@@ -8,7 +8,7 @@
   <meta property="og:title" content="Blythe Business Solutions" />
   <meta property="og:description" content="Creative that grows local brands. Modern vending for workplaces, schools, and events." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="/images/favicon.svg" />
+  <link rel="icon" href="footer-logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="container navbar">
       <a class="brand" href="index.html" aria-label="Blythe Business Solutions — Home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img src="footer-logo.png" alt="Blythe logo" class="brand-mark-img" />
         <span>Blythe Business Solutions</span>
       </a>
 
@@ -48,7 +48,7 @@
       </div>
     </section>
 
-    <!-- Quick features / rotating service -->
+    <!-- Features -->
     <section class="section">
       <div class="container grid grid-3">
         <div class="surface card">
@@ -119,7 +119,10 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="footer-logo.png" alt="Blythe logo" width="28" height="28" />
+        <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      </div>
       <div class="footer-nav">
         <a href="creative.html">Creative</a>
         <a href="vending.html">Vending</a>
@@ -130,8 +133,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
