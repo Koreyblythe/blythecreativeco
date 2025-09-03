@@ -1,50 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blythe Creative</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blythe Business Solutions — Creative & Vending for Local Brands</title>
+  <meta name="description" content="Blythe Business Solutions helps rural and regional businesses show up professionally—online and in person. Explore Blythe Creative and Blythe Vending." />
+  <meta property="og:title" content="Blythe Business Solutions" />
+  <meta property="og:description" content="Creative that grows local brands. Modern vending for workplaces, schools, and events." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/images/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Blythe Business Solutions — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Blythe Business Solutions</span>
+      </a>
 
-    <!-- Sidebar Navigation -->
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-    <nav class="sidebar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="overlay" onclick="toggleSidebar()"></div>
+      <nav class="nav" data-nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="creative.html">Blythe Creative</a>
+        <a href="vending.html">Blythe Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-    <!-- Header Section -->
-    <header>
-        <img src="logo-transparent.png" alt="Blythe Creative Logo" class="top-logo">
-        <h1 class="header-text">Leave Your Creative Mark</h1>
-    </header>
-
-    <!-- Cycling Services Section -->
-    <div class="cycling-services">
-        <p>We specialize in <span id="cycling-text">branding & marketing.</span></p>
+      <button class="burger" type="button" aria-label="Toggle navigation" data-nav-toggle>
+        <span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Contact Box -->
-    <section id="contact" class="contact-box">
-        <h2>Contact</h2>
-        <p>Social Media: <a href="https://instagram.com/blythecreative.co" target="_blank" class="highlight-link">@blythecreative.co</a></p>
-        <p>Email: <a href="mailto:info@blythecreative.co" class="highlight-link">info@blythecreative.co</a></p>
-        <p>Phone: (618) 319-0067</p>
-        <p>Location: Murphysboro, Illinois</p>
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container stack">
+        <span class="eyebrow">Blythe Business Solutions</span>
+        <h1>Creative + Vending for businesses that serve real communities.</h1>
+        <p>We help rural and regional brands show up professionally—online and in person. Choose your path below.</p>
+        <div class="btn-row" style="margin-top:10px;">
+          <a class="btn btn--primary" href="creative.html">Explore Creative</a>
+          <a class="btn btn--outline" href="vending.html">Explore Vending</a>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo">
-    </footer>
+    <!-- Quick features / rotating service -->
+    <section class="section">
+      <div class="container grid grid-3">
+        <div class="surface card">
+          <h3>What we make</h3>
+          <p class="muted">Branding, web, and content tailored to small businesses.</p>
+          <div class="feature-list" style="margin-top:10px;">
+            <div class="feature"><span class="dot"></span><span>Logo Design & Brand Identity</span></div>
+            <div class="feature"><span class="dot"></span><span>Web & Landing Pages</span></div>
+            <div class="feature"><span class="dot"></span><span>Social Content & Copywriting</span></div>
+            <div class="feature"><span class="dot"></span><span>Marketing Consulting</span></div>
+          </div>
+        </div>
 
+        <div class="surface card">
+          <h3>What we operate</h3>
+          <p class="muted">Reliable vending for workplaces, schools, and events.</p>
+          <div class="feature-list" style="margin-top:10px;">
+            <div class="feature"><span class="dot"></span><span>Machine Placement & Setup</span></div>
+            <div class="feature"><span class="dot"></span><span>Restocking & Maintenance</span></div>
+            <div class="feature"><span class="dot"></span><span>Cashless Payments</span></div>
+            <div class="feature"><span class="dot"></span><span>Custom Wraps & Branding</span></div>
+          </div>
+        </div>
+
+        <div class="surface card">
+          <h3>Right now we’re focusing on</h3>
+          <p class="muted">Next up: <strong id="service-rotator">Logo Design</strong></p>
+          <div class="btn-row" style="margin-top:12px;">
+            <a class="btn btn--primary" href="creative.html">Start a Creative Project</a>
+            <a class="btn btn--outline" href="vending.html">Request a Vending Machine</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-path cards -->
+    <section class="section">
+      <div class="container grid grid-2">
+        <a class="surface card" href="creative.html" style="display:block">
+          <div class="kicker">Blythe Creative</div>
+          <h2 style="margin-top:6px;">Creative that grows local brands</h2>
+          <p class="muted" style="margin-top:6px;">Clean, practical branding and websites that help customers choose you.</p>
+          <div class="btn btn--outline" style="margin-top:12px;">Explore Creative</div>
+        </a>
+
+        <a class="surface card" href="vending.html" style="display:block">
+          <div class="kicker">Blythe Vending</div>
+          <h2 style="margin-top:6px;">Modern vending, minimal hassle</h2>
+          <p class="muted" style="margin-top:6px;">Placement, restocking, and cashless payments—reliable and responsive.</p>
+          <div class="btn btn--outline" style="margin-top:12px;">Explore Vending</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Simple CTA -->
+    <section class="section">
+      <div class="container surface card center">
+        <h2>Have questions or a specific request?</h2>
+        <p class="muted">We’re based in Murphysboro, Illinois and serve surrounding areas.</p>
+        <div class="btn-row" style="justify-content:center; margin-top:10px;">
+          <a class="btn btn--primary" href="contact.html">Contact Us</a>
+          <a class="btn btn--outline" href="about.html">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      <div class="footer-nav">
+        <a href="creative.html">Creative</a>
+        <a href="vending.html">Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
