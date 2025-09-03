@@ -10,24 +10,34 @@ img, picture { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
-/* Design tokens */
+/* Design tokens — using a refined deep slate brand background.
+   Swap --bg and --surface if you provide an exact hex. */
 :root{
-  --brand:#2B282B;        /* primary */
-  --brand-ink:#111111;    /* headings */
-  --accent:#0EA5E9;       /* subtle accent for links/hover */
-  --bg:#F7F7F7;
-  --surface:#FFFFFF;
-  --text:#2A2A2A;
-  --muted:#6B7280;
+  --brand:#e7e7ea;        /* primary on dark */
+  --brand-ink:#ffffff;    /* headings on dark */
+  --accent:#0EA5E9;       /* accent for dots/links */
+  --bg:#121316;           /* BRAND BACKGROUND (edit if needed) */
+  --surface:#17191c;      /* card surface slightly lighter than bg */
+  --text:#e7e7ea;         /* body text */
+  --muted:#9aa1ac;
   --radius:12px;
-  --shadow:0 6px 24px rgba(0,0,0,.08);
+  --shadow:0 8px 30px rgba(0,0,0,.35);
   --maxw:1120px;
 }
 
-/* Base typography */
+/* Lock scheme so it always uses brand dark */
 @media (prefers-color-scheme: dark) {
-  :root{ --bg:#0f0f11; --surface:#121316; --text:#e7e7ea; --brand:#e7e7ea; --brand-ink:#ffffff; --muted:#9aa1ac; }
+  :root{
+    --bg:#121316;
+    --surface:#17191c;
+    --text:#e7e7ea;
+    --brand:#e7e7ea;
+    --brand-ink:#ffffff;
+    --muted:#9aa1ac;
+  }
 }
+
+/* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 body{
@@ -48,6 +58,7 @@ body{
 
 .surface{
   background: var(--surface);
+  border:1px solid rgba(255,255,255,.06);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -65,28 +76,28 @@ h3{ font-size: 20px; color: var(--brand-ink); }
 
 /* Buttons */
 .btn{ display:inline-flex; align-items:center; gap:10px; border-radius: 999px; padding: 12px 18px; font-weight: 600; border: 2px solid transparent; transition: .2s ease; cursor: pointer; }
-.btn--primary{ background: var(--brand); color: #fff; }
+.btn--primary{ background: #ffffff; color: #000; }
 .btn--primary:hover{ transform: translateY(-1px); opacity: .95; }
-.btn--outline{ background: transparent; border-color: var(--brand); color: var(--brand); }
-.btn--outline:hover{ background: var(--brand); color:#fff; }
+.btn--outline{ background: transparent; border-color: #fff; color: #fff; }
+.btn--outline:hover{ background:#fff; color:#000; }
 .btn-row{ display:flex; flex-wrap:wrap; gap:12px; }
 
-/* Header & Nav */
+/* Header & Nav with B logo image */
 .site-header{
   position: sticky; top:0; z-index:1000;
   backdrop-filter: saturate(140%) blur(8px);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .navbar{ display:flex; align-items:center; justify-content:space-between; }
 .brand{ display:flex; align-items:center; gap:12px; font-weight:800; color: var(--brand-ink); }
-.brand-mark{ inline-size:34px; block-size:34px; background: var(--brand); border-radius:8px; }
+.brand-mark-img{ inline-size:34px; block-size:34px; object-fit:contain; border-radius:8px; }
 .nav{ display:flex; align-items:center; gap:18px; }
 .nav a{ color: var(--text); font-weight:600; padding:10px 12px; border-radius:8px; }
-.nav a[aria-current="page"]{ color:#fff; background: var(--brand); }
-.nav a:hover{ color: var(--brand); }
+.nav a[aria-current="page"]{ color:#fff; background: rgba(255,255,255,.08); }
+.nav a:hover{ color: #fff; background: rgba(255,255,255,.06); }
 
-.burger{ display:none; width:42px; aspect-ratio:1/1; border:1px solid rgba(0,0,0,.12); border-radius:10px; background: var(--surface); align-items:center; justify-content:center; }
+.burger{ display:none; width:42px; aspect-ratio:1/1; border:1px solid rgba(255,255,255,.12); border-radius:10px; background: transparent; align-items:center; justify-content:center; }
 .burger span{ width:20px; height:2px; background: var(--text); position:relative; display:block; }
 .burger span::before, .burger span::after{ content:""; position:absolute; left:0; width:100%; height:2px; background: var(--text); }
 .burger span::before{ top:-6px; } .burger span::after{ top:6px; }
@@ -115,13 +126,13 @@ h3{ font-size: 20px; color: var(--brand-ink); }
 
 /* Process Steps */
 .steps{ counter-reset: step; display:grid; gap:12px; }
-.step{ padding:18px; border:1px solid rgba(0,0,0,.08); border-radius:12px; background: var(--surface); }
-.step::before{ counter-increment: step; content: counter(step); font-weight:800; background: var(--brand); color:#fff; display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; margin-right:10px; }
+.step{ padding:18px; border:1px solid rgba(255,255,255,.06); border-radius:12px; background: var(--surface); }
+.step::before{ counter-increment: step; content: counter(step); font-weight:800; background: #fff; color:#000; display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; margin-right:10px; }
 
 /* Forms */
 form{ display:grid; gap:12px; }
 input, select, textarea{
-  width:100%; border:1px solid rgba(0,0,0,.12); border-radius:10px; padding:12px 14px; background: var(--surface); color: var(--text);
+  width:100%; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:12px 14px; background: var(--surface); color: var(--text);
 }
 textarea{ min-height: 120px; resize: vertical; }
 
@@ -129,6 +140,7 @@ textarea{ min-height: 120px; resize: vertical; }
 .site-footer{ padding: 42px 0; color: var(--muted); }
 .footer-inner{ display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
 .footer-nav{ display:flex; gap:14px; }
+.footer-inner img{ opacity:.9; }
 
 /* Small utility */
 .kicker{ color: var(--accent); font-weight:700; }
