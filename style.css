@@ -1,6 +1,6 @@
-/* ========= Blythe Business Solutions — Global Styles ========= */
+/* ========= Blythe Business Solutions — Global Styles (Light / Monochrome) ========= */
 
-/* CSS Reset (light) */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; }
 html:focus-within { scroll-behavior: smooth; }
 html, body { height: 100%; }
@@ -10,40 +10,28 @@ img, picture { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
-/* Design tokens — using a refined deep slate brand background.
-   Swap --bg and --surface if you provide an exact hex. */
-:root {
-  --brand: #2b282b;        /* dark ink (for text/headings) */
-  --brand-ink: #2b282b;
-  --accent: #0EA5E9;       /* accent blue */
-  --bg: #e4e2dd;           /* your logo background hex */
-  --surface: #ffffff;      /* white cards on beige */
-  --text: #2b282b;         /* dark body text */
-  --muted: #5c5c5c;        /* gray-muted */
-  --radius: 12px;
-  --shadow: 0 6px 20px rgba(0,0,0,.08);
-  --maxw: 1120px;
+/* ---- Brand Palette (no blue) ---- */
+:root{
+  --bg:#e4e2dd;          /* brand background */
+  --surface:#f6f5f1;     /* card surface on beige */
+  --ink:#2b282b;         /* main text / headings */
+  --muted:#6a665f;       /* secondary text */
+  --accent:#9a948a;      /* subtle taupe accent (dots, hovers) */
+  --radius:12px;
+  --shadow:0 8px 24px rgba(43,40,43,.08);
+  --maxw:1120px;
 }
 
-/* Lock scheme so it always uses brand dark */
-@media (prefers-color-scheme: dark) {
-  :root{
-    --bg:#121316;
-    --surface:#17191c;
-    --text:#e7e7ea;
-    --brand:#e7e7ea;
-    --brand-ink:#ffffff;
-    --muted:#9aa1ac;
-  }
-}
+/* lock to light scheme */
+@media (prefers-color-scheme: dark){ :root{ --bg:#e4e2dd; --surface:#f6f5f1; --ink:#2b282b; --muted:#6a665f; --accent:#9a948a; } }
 
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--ink);
   line-height: 1.6;
 }
 
@@ -58,48 +46,44 @@ body{
 
 .surface{
   background: var(--surface);
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(43,40,43,.10);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-h1, .display{
-  font-family: "Playfair Display", serif;
-  color: var(--brand-ink);
-  line-height: 1.15;
-}
-h1{ font-size: clamp(38px, 6vw, 56px); letter-spacing: -0.02em; }
-h2{ font-size: clamp(26px, 3.5vw, 34px); color: var(--brand-ink); }
-h3{ font-size: 20px; color: var(--brand-ink); }
-
+h1, .display{ font-family:"Playfair Display", serif; color: var(--ink); line-height:1.15; }
+h1{ font-size: clamp(38px, 6vw, 56px); letter-spacing:-0.02em; }
+h2{ font-size: clamp(26px, 3.5vw, 34px); color: var(--ink); }
+h3{ font-size: 20px; color: var(--ink); }
 .muted{ color: var(--muted); }
 
-/* Buttons */
-.btn{ display:inline-flex; align-items:center; gap:10px; border-radius: 999px; padding: 12px 18px; font-weight: 600; border: 2px solid transparent; transition: .2s ease; cursor: pointer; }
-.btn--primary{ background: #ffffff; color: #000; }
-.btn--primary:hover{ transform: translateY(-1px); opacity: .95; }
-.btn--outline{ background: transparent; border-color: #fff; color: #fff; }
-.btn--outline:hover{ background:#fff; color:#000; }
+/* Buttons (ink-based) */
+.btn{ display:inline-flex; align-items:center; gap:10px; border-radius:999px; padding:12px 18px; font-weight:600; border:2px solid transparent; transition:.2s ease; cursor:pointer; }
+.btn--primary{ background: var(--ink); color:#f0efec; }
+.btn--primary:hover{ transform: translateY(-1px); background:#1f1d1e; }
+.btn--outline{ background: transparent; border-color: var(--ink); color: var(--ink); }
+.btn--outline:hover{ background: var(--ink); color:#f0efec; }
 .btn-row{ display:flex; flex-wrap:wrap; gap:12px; }
 
-/* Header & Nav with B logo image */
+/* Header & Nav */
 .site-header{
   position: sticky; top:0; z-index:1000;
   backdrop-filter: saturate(140%) blur(8px);
-  background: rgba(0,0,0,.25);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  /* soft ink tint on beige */
+  background: color-mix(in oklab, var(--bg) 88%, #000 12%);
+  border-bottom: 1px solid rgba(43,40,43,.10);
 }
 .navbar{ display:flex; align-items:center; justify-content:space-between; }
-.brand{ display:flex; align-items:center; gap:12px; font-weight:800; color: var(--brand-ink); }
+.brand{ display:flex; align-items:center; gap:12px; font-weight:800; color: var(--ink); }
 .brand-mark-img{ inline-size:34px; block-size:34px; object-fit:contain; border-radius:8px; }
 .nav{ display:flex; align-items:center; gap:18px; }
-.nav a{ color: var(--text); font-weight:600; padding:10px 12px; border-radius:8px; }
-.nav a[aria-current="page"]{ color:#fff; background: rgba(255,255,255,.08); }
-.nav a:hover{ color: #fff; background: rgba(255,255,255,.06); }
+.nav a{ color: var(--ink); font-weight:600; padding:10px 12px; border-radius:8px; }
+.nav a[aria-current="page"]{ background: rgba(43,40,43,.10); }
+.nav a:hover{ background: rgba(43,40,43,.08); }
 
-.burger{ display:none; width:42px; aspect-ratio:1/1; border:1px solid rgba(255,255,255,.12); border-radius:10px; background: transparent; align-items:center; justify-content:center; }
-.burger span{ width:20px; height:2px; background: var(--text); position:relative; display:block; }
-.burger span::before, .burger span::after{ content:""; position:absolute; left:0; width:100%; height:2px; background: var(--text); }
+.burger{ display:none; width:42px; aspect-ratio:1/1; border:1px solid rgba(43,40,43,.18); border-radius:10px; background: transparent; align-items:center; justify-content:center; }
+.burger span{ width:20px; height:2px; background: var(--ink); position:relative; display:block; }
+.burger span::before, .burger span::after{ content:""; position:absolute; left:0; width:100%; height:2px; background: var(--ink); }
 .burger span::before{ top:-6px; } .burger span::after{ top:6px; }
 
 @media (max-width: 880px){
@@ -126,13 +110,14 @@ h3{ font-size: 20px; color: var(--brand-ink); }
 
 /* Process Steps */
 .steps{ counter-reset: step; display:grid; gap:12px; }
-.step{ padding:18px; border:1px solid rgba(255,255,255,.06); border-radius:12px; background: var(--surface); }
-.step::before{ counter-increment: step; content: counter(step); font-weight:800; background: #fff; color:#000; display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; margin-right:10px; }
+.step{ padding:18px; border:1px solid rgba(43,40,43,.10); border-radius:12px; background: var(--surface); }
+.step::before{ counter-increment: step; content: counter(step); font-weight:800; background: var(--ink); color:#f0efec; display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; margin-right:10px; }
 
 /* Forms */
 form{ display:grid; gap:12px; }
 input, select, textarea{
-  width:100%; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:12px 14px; background: var(--surface); color: var(--text);
+  width:100%; border:1px solid rgba(43,40,43,.18); border-radius:10px; padding:12px 14px;
+  background: #fff; color: var(--ink);
 }
 textarea{ min-height: 120px; resize: vertical; }
 
@@ -142,6 +127,6 @@ textarea{ min-height: 120px; resize: vertical; }
 .footer-nav{ display:flex; gap:14px; }
 .footer-inner img{ opacity:.9; }
 
-/* Small utility */
-.kicker{ color: var(--accent); font-weight:700; }
+/* Utilities */
+.kicker{ color: var(--muted); font-weight:700; }
 .center{ text-align:center; }
