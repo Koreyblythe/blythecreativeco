@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Blythe Business Solutions</title>
+  <meta name="description" content="Get in touch with Blythe Business Solutions. Ask about Blythe Creative or Blythe Vending services." />
+  <meta property="og:title" content="Contact — Blythe Business Solutions" />
+  <meta property="og:description" content="Start a project with Blythe Creative or request vending services with Blythe Vending." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/images/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Blythe Business Solutions — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Blythe Business Solutions</span>
+      </a>
 
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="creative.html">Blythe Creative</a>
+        <a href="vending.html">Blythe Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Toggle navigation" data-nav-toggle>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container stack">
+        <span class="eyebrow">Contact</span>
+        <h1>Let’s connect</h1>
+        <p>Use the form below to start a project, request a vending machine, or just ask a question.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+      <div class="container">
+        <form id="contact-form" class="surface card">
+          <div class="stack">
+            <label for="name"><strong>Name</strong></label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="stack">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="stack">
+            <label for="phone"><strong>Phone (optional)</strong></label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="stack">
+            <label for="service"><strong>I'm interested in</strong></label>
+            <select id="service" name="service">
+              <option value="creative">Blythe Creative</option>
+              <option value="vending">Blythe Vending</option>
+              <option value="general">General Question</option>
+            </select>
+          </div>
+
+          <div class="stack">
+            <label for="message"><strong>Message</strong></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button type="submit" class="btn btn--primary">Send Message</button>
+            <a href="index.html" class="btn btn--outline">Back to Home</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Direct Contact Info -->
+    <section class="section">
+      <div class="container surface card stack">
+        <h2>Other ways to reach us</h2>
+        <p class="muted">We’re based in Murphysboro, Illinois and serve Southern Illinois and surrounding areas.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@blythecreatives.co">info@blythecreatives.co</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/blythecreatives" target="_blank">@blythecreatives</a></p>
+        <p><strong>Phone:</strong> (optional — add your number here)</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      <div class="footer-nav">
+        <a href="creative.html">Creative</a>
+        <a href="vending.html">Vending</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
