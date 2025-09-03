@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Blythe Creative</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Blythe Business Solutions</title>
+  <meta name="description" content="Learn about Blythe Business Solutions. Based in Murphysboro, Illinois, offering Blythe Creative and Blythe Vending to support local businesses." />
+  <meta property="og:title" content="About — Blythe Business Solutions" />
+  <meta property="og:description" content="Blythe Business Solutions helps rural and regional businesses show up professionally—online and in person. Went to school at John A." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/images/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="packages.html">Packages</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Blythe Business Solutions — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Blythe Business Solutions</span>
+      </a>
+
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="creative.html">Blythe Creative</a>
+        <a href="vending.html">Blythe Vending</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Toggle navigation" data-nav-toggle>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
   <main>
-    <section class="section-container">
-      <h1 class="header-text">About Blythe Creative</h1>
-      <div class="about-grid">
-        <div class="about-box">
-          <h2>Brand Identity</h2>
-          <p>Custom logos, cohesive branding, and unique visual identities crafted to reflect your business’s voice and values.</p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container stack">
+        <span class="eyebrow">About</span>
+        <h1>Who we are</h1>
+        <p>Based in Murphysboro, Illinois, Blythe Business Solutions helps rural and regional businesses show up professionally—online and in person.</p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section">
+      <div class="container grid grid-2">
+        <div class="stack">
+          <h2>Our story</h2>
+          <p>
+            Blythe Business Solutions was created to make professional creative and vending accessible to local businesses and communities. 
+            We believe small and mid-sized organizations deserve the same quality branding, design, and service as big-city companies—without the inflated costs.
+          </p>
+          <p>
+            We run two service lines: <strong>Blythe Creative</strong> (branding, web, and content) and <strong>Blythe Vending</strong> (placement, restocking, and maintenance).
+          </p>
+          <p>
+            Went to school at <strong>John A</strong>. Today, we combine that background with real-world business experience to deliver straightforward, effective solutions.
+          </p>
         </div>
-        <div class="about-box">
-          <h2>Marketing Strategy</h2>
-          <p>Tailored marketing plans to help small businesses grow their audience and engage meaningfully.</p>
-        </div>
-        <div class="about-box">
-          <h2>Consulting Services</h2>
-          <p>Guidance and insight for entrepreneurs and business owners on how to scale, improve customer experience, and strengthen positioning.</p>
-        </div>
-        <div class="about-box">
-          <h2>Social Media</h2>
-          <p>Professional social media strategies to enhance visibility, engagement, and brand image across platforms.</p>
+
+        <div class="surface card stack">
+          <h3>Quick facts</h3>
+          <div class="feature"><span class="dot"></span><span>Based in Murphysboro, Illinois</span></div>
+          <div class="feature"><span class="dot"></span><span>Serving Southern Illinois and nearby areas</span></div>
+          <div class="feature"><span class="dot"></span><span>Two service lines: Creative + Vending</span></div>
+          <div class="feature"><span class="dot"></span><span>Focused on rural and regional businesses</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section-container">
-      <h2>Founder</h2>
-      <p><strong>Korey Blythe</strong> is a Business Administration graduate from John A. Logan College and currently pursuing a Marketing degree at Southern Illinois University Carbondale (SIU).</p>
-      <p>With a strong vision and growing expertise, Korey’s mission is to help small and local businesses redefine their brand and digital presence through meaningful, personalized marketing strategies. Blythe Creative reflects Korey's passion for building real connections and equipping businesses with the creative tools they need to thrive.</p>
+    <!-- CTA -->
+    <section class="section">
+      <div class="container surface card center">
+        <h2>Work with us</h2>
+        <p class="muted">Whether you need branding, a website, or a vending solution, we’re here to help your business show up and grow.</p>
+        <div class="btn-row" style="justify-content:center; margin-top:10px;">
+          <a class="btn btn--primary" href="contact.html">Contact Us</a>
+          <a class="btn btn--outline" href="creative.html">Explore Creative</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <img src="footer-logo.png" alt="Blythe Creative Mark" class="footer-logo" />
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Blythe Business Solutions</div>
+      <div class="footer-nav">
+        <a href="creative.html">Creative</a>
+        <a href="vending.html">Vending</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("active");
-      document.getElementById("overlay").classList.toggle("active");
-    }
-
-    function closeSidebar() {
-      document.getElementById("sidebar").classList.remove("active");
-      document.getElementById("overlay").classList.remove("active");
-    }
-  </script>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
